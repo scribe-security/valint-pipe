@@ -1,0 +1,13 @@
+image: scribesecuriy.jfrog.io/scribe-docker-public-local/scribe_bitbucket:latest
+repository: https://www.github.com/scribe-security/bitbucket-pipe
+variables:
+  USERNAME:
+    required: true
+    type: string
+  PASSWORD:
+    required: true
+    type: string
+tags:
+  - scribe
+  - gensbom
+  - valint
