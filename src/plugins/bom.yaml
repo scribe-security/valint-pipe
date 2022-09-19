@@ -1,0 +1,4 @@
+command_prefix: gensbom bom
+variable_mapping:
+  version: --version
+

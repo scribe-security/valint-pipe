@@ -1,12 +1,12 @@
 image: scribesecuriy.jfrog.io/scribe-docker-public-local/scribe_bitbucket:latest
 repository: https://www.github.com/scribe-security/bitbucket-pipe
 variables:
-  USERNAME:
+  command_name:
     required: true
     type: string
-  PASSWORD:
+  version:
     required: true
-    type: string
+    type: boolean
 tags:
   - scribe
   - gensbom
