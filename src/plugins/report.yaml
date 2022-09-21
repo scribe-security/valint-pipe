@@ -1,17 +1,8 @@
-command_prefix: gensbom
+command_prefix: valint report
 variable_mapping:
-  ATTACH_REGEX: --attach-regex
-  ATTEST_CONFIG: --attest.config
-  ATTEST_DEFAULT: --attest.default
-  ATTEST_NAME: --attest.name
-  COMPONENTS: --components
   CONFIG: --config
   CONTEXT_TYPE: --context-type
-  ENV: --env
-  FAILONERROR: --failonerror
-  FILTER_REGEX: --filter-regex
-  FORCE: --force
-  FORMAT: --format
+  INTEGRITY: --integrity
   LABEL: --label
   LEVEL: --level
   OUTPUT_DIRECTORY: --output-directory
@@ -22,6 +13,7 @@ variable_mapping:
   SCRIBE_CLIENT_SECRET: --scribe.client-secret
   SCRIBE_ENABLE: --scribe.enable
   SCRIBE_URL: --scribe.url
+  SECTION: --section
   SHOW: --show
   TARGET: ""
   VERBOSE: --verbose

@@ -1,17 +1,14 @@
-command_prefix: gensbom
+command_prefix: gensbom verify
 variable_mapping:
-  ATTACH_REGEX: --attach-regex
   ATTEST_CONFIG: --attest.config
   ATTEST_DEFAULT: --attest.default
   ATTEST_NAME: --attest.name
-  COMPONENTS: --components
+  ATTESTATION: --attestation
   CONFIG: --config
   CONTEXT_TYPE: --context-type
-  ENV: --env
   FAILONERROR: --failonerror
   FILTER_REGEX: --filter-regex
-  FORCE: --force
-  FORMAT: --format
+  INPUT_FORMAT: --input-format
   LABEL: --label
   LEVEL: --level
   OUTPUT_DIRECTORY: --output-directory

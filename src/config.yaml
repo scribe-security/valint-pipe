@@ -1,12 +1,97 @@
 image: scribesecuriy.jfrog.io/scribe-docker-public-local/scribe_bitbucket:latest
 repository: https://www.github.com/scribe-security/bitbucket-pipe
 variables:
-  command_name:
-    required: true
+  COMMAND_NAME:
     type: string
-  version:
     required: true
+  CONFIG:
+    type: string
+    required: false
+  CONTEXT_TYPE:
+    type: string
+    required: false
+  INTEGRITY:
+    type: string
+    required: false
+  LABEL:
+    type: string
+    required: false
+  LEVEL:
+    type: string
+    required: false
+  OUTPUT_DIRECTORY:
+    type: string
+    required: false
+  OUTPUT_FILE:
+    type: string
+    required: false
+  PRODUCT_KEY:
+    type: string
+    required: false
+  QUIET:
     type: boolean
+    required: false
+  SCRIBE_CLIENT_ID:
+    type: string
+    required: false
+  SCRIBE_CLIENT_SECRET:
+    type: string
+    required: false
+  SCRIBE_ENABLE:
+    type: boolean
+    required: false
+  SCRIBE_URL:
+    type: string
+    required: false
+  SECTION:
+    type: string
+    required: false
+  SHOW:
+    type: boolean
+    required: false
+  TARGET:
+    type: string
+    required: true
+  VERBOSE:
+    type: integer
+    required: false
+  ATTACH_REGEX:
+    type: string
+    required: false
+  ATTEST_CONFIG:
+    type: string
+    required: false
+  ATTEST_DEFAULT:
+    type: string
+    required: false
+  ATTEST_NAME:
+    type: string
+    required: false
+  COMPONENTS:
+    type: string
+    required: false
+  ENV:
+    type: string
+    required: false
+  FAILONERROR:
+    type: boolean
+    required: false
+  FILTER_REGEX:
+    type: string
+    required: false
+  FORCE:
+    type: boolean
+    required: false
+  FORMAT:
+    type: string
+    required: false
+  ATTESTATION:
+    type: string
+    required: false
+  INPUT_FORMAT:
+    type: string
+    required: false
+
 tags:
   - scribe
   - gensbom
