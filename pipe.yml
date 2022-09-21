@@ -1,0 +1,7 @@
+name: scribe-cli
+image: scribe-security/scribe-pipe:0.0.0
+description: secure your code
+repository: https://bitbucket.org/scribe-security/scribe-pipe
+maintainer: scribe-security@scribesecurity.com
+tags:
+    - code security
