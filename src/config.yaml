@@ -43,6 +43,12 @@ variables:
   SCRIBE_URL:
     type: string
     required: false
+  SCRIBE_LOGIN_URL:
+    type: string
+    required: false
+  SCRIBE_AUDIENCE:
+    type: string
+    required: false
   SECTION:
     type: string
     required: false

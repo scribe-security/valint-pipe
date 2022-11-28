@@ -13,6 +13,8 @@ variable_mapping:
   SCRIBE_CLIENT_SECRET: --scribe.client-secret
   SCRIBE_ENABLE: --scribe.enable
   SCRIBE_URL: --scribe.url
+  SCRIBE_LOGIN_URL: --scribe.login-url
+  SCRIBE_AUDIENCE: --scribe.auth.audience
   SECTION: --section
   SHOW: --show
   TARGET: ""

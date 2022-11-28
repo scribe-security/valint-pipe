@@ -30,6 +30,8 @@ Add the following snippet to the script section of your `bitbucket-pipelines.yml
 | SCRIBE_CLIENT_SECRET |  Scribe client secret |
 | SCRIBE_ENABLE |  Enable scribe client |
 | SCRIBE_URL |  Scribe url |
+| SCRIBE_LOGIN_URL |  Scribe login url |
+| SCRIBE_AUDIENCE |  Scribe AUDIENCE |
 | SECTION | Select report sections, options=[files packages packages-files summary] |
 | SHOW | Print report to stdout |
 | TARGET |  download report from scribe service |
