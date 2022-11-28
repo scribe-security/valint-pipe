@@ -13,7 +13,7 @@ with open(os.path.join("/src/","plugins", command_name + ".yaml"), "r") as strea
     try:
         command_schema = yaml.safe_load(stream)
         command = command_schema["command_prefix"]
-        if target != "":
+        if  target is not None and target != "":
             command = command + " " + target
         for var in pipe.variables:
             if var == "COMMAND_NAME" or var == "TARGET":
