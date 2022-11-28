@@ -4,11 +4,11 @@ from bitbucket_pipes_toolkit import Pipe, get_logger
 import yaml
 
 logger = get_logger()
-pipe = Pipe(pipe_metadata_file="./config.yaml")
+pipe = Pipe(pipe_metadata_file="/src/config.yaml")
 
 command_name = pipe.get_variable("COMMAND_NAME")
 
-with open(os.path.join("./","plugins", command_name + ".yaml"), "r") as stream:
+with open(os.path.join("/src/","plugins", command_name + ".yaml"), "r") as stream:
     try:
         command_schema = yaml.safe_load(stream)
         command = command_schema["command_prefix"]
