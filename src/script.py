@@ -12,7 +12,9 @@ target = pipe.get_variable("TARGET")
 with open(os.path.join("/src/","plugins", command_name + ".yaml"), "r") as stream:
     try:
         command_schema = yaml.safe_load(stream)
-        command = command_schema["command_prefix"] + " " + target
+        command = command_schema["command_prefix"]
+        if target != "":
+            command = command + " " + target
         for var in pipe.variables:
             if var == "COMMAND_NAME" or var == "TARGET":
                 continue

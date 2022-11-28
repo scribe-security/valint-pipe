@@ -57,7 +57,7 @@ variables:
     required: false
   TARGET:
     type: string
-    required: true
+    required: false
   VERBOSE:
     type: integer
     required: false
