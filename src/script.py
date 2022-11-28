@@ -7,13 +7,14 @@ logger = get_logger()
 pipe = Pipe(pipe_metadata_file="/src/config.yaml")
 
 command_name = pipe.get_variable("COMMAND_NAME")
+target = pipe.get_variable("TARGET")
 
 with open(os.path.join("/src/","plugins", command_name + ".yaml"), "r") as stream:
     try:
         command_schema = yaml.safe_load(stream)
-        command = command_schema["command_prefix"]
+        command = command_schema["command_prefix"] + " " + target
         for var in pipe.variables:
-            if var == "COMMAND_NAME":
+            if var == "COMMAND_NAME" or var == "TARGET":
                 continue
             if var in command_schema["variable_mapping"]:
                 value = pipe.get_variable(var)
