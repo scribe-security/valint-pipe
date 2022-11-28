@@ -1,4 +1,4 @@
-command_prefix: gensbom verify
+command_prefix: valint verify
 variable_mapping:
   ATTEST_CONFIG: --attest.config
   ATTEST_DEFAULT: --attest.default

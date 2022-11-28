@@ -1,4 +1,4 @@
-command_prefix: gensbom
+command_prefix: valint bom
 variable_mapping:
   ATTACH_REGEX: --attach-regex
   ATTEST_CONFIG: --attest.config

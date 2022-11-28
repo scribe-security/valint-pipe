@@ -1,4 +1,4 @@
-# Bitbucket Pipelines Pipe: scribe-cli
+# Bitbucket Pipelines Pipe: valint-cli
 
 secure your code
 

@@ -1,4 +1,4 @@
-image: scribesecuriy.jfrog.io/scribe-docker-public-local/scribe_bitbucket:latest
+image: scribesecuriy.jfrog.io/scribe-docker-public-local/valint-pipe:latest
 repository: https://www.github.com/scribe-security/bitbucket-pipe
 variables:
   COMMAND_NAME:
