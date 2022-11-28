@@ -1,0 +1,34 @@
+name: release pipe
+
+env:
+  ARTIFACTORY_URL: "https://scribesecuriy.jfrog.io"
+  RELEASE_ARTIFACTORY_USERNAME: mikey@scribesecurity.com
+
+on:
+  workflow_dispatch:
+  push:
+  tags:
+    - "*"
+
+jobs:
+  release:
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        shell: bash
+    steps:
+    
+      - uses: actions/checkout@v2
+
+   
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ${{ env.ARTIFACTORY_URL }}
+          username: ${{ secrets.RELEASE_ARTIFACTORY_USERNAME }}
+          password: ${{ secrets.RELEASE_ARTIFACTORY_TOKEN }}
+      
+      - name: Build & publish release artifacts
+        run: |
+          docker build -t scribesecuriy.jfrog.io/scribe-docker-public-local/valint-pipe:${GITHUB_REF#refs/*/} -t scribesecuriy.jfrog.io/scribe-docker-public-local/valint-pipe:latest .
+          docker push scribesecuriy.jfrog.io/scribe-docker-public-local/valint-pipe:latest --all-tags
