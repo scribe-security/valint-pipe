@@ -29,11 +29,11 @@ jobs:
           username: ${{ secrets.RELEASE_ARTIFACTORY_USERNAME }}
           password: ${{ secrets.RELEASE_ARTIFACTORY_TOKEN }}
       
-      - name: Build & publish release artifacts
+      - name: Release Build
         run: |
           docker build -t scribesecuriy.jfrog.io/scribe-docker-public-local/valint-pipe:${GITHUB_REF#refs/*/} -t scribesecuriy.jfrog.io/scribe-docker-public-local/valint-pipe:latest .
 
-      - name: Pre-release Build & publish release artifacts
+      - name: Pre-release Build
         run: |
           docker build -t scribesecuriy.jfrog.io/scribe-docker-public-local/valint-pipe:${GITHUB_REF#refs/*/} -t scribesecuriy.jfrog.io/scribe-docker-public-local/valint-pipe:latest -f Dockerfile_pre
 
