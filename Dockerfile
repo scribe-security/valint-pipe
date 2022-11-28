@@ -6,4 +6,4 @@ ADD requirements.txt .
 RUN pip install -r requirements.txt
 ADD src src
 WORKDIR /src/
-ENTRYPOINT [ "./script.py" ]
+ENTRYPOINT [ "/src/script.py" ]
