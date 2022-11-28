@@ -4,12 +4,12 @@ env:
   ARTIFACTORY_URL: "https://scribesecuriy.jfrog.io"
   RELEASE_ARTIFACTORY_USERNAME: mikey@scribesecurity.com
 
-on:
-  workflow_dispatch:
+on: 
   push:
-    branches:
-  tags:
-    - "*"
+    tags:
+      - '*'
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
   release:
