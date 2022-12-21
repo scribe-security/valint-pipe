@@ -44,6 +44,6 @@ jobs:
       #   uses: pixta-dev/repository-mirroring-action@v1
       #   with:
       #     target_repo_url:
-      #       git@bitbucket.org:guycherno/bitbucket-pipe.git
+      #       git@bitbucket.org:scribe-security/bitbucket-pipe.git
       #     ssh_private_key:                           
       #       ${{ secrets.BITBUCKET_SSH_KEY }}

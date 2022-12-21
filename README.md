@@ -12,7 +12,7 @@ Scribe support evidence collecting and integrity verification for Bitbucket pipe
 Add the following snippet to the script section of your `bitbucket-pipelines.yml` file:
 
 ```yaml
-- pipe: docker://scribesecuriy.jfrog.io/scribe-docker-public-local/valint-pipe:0.1.0
+- pipe: docker://scribesecuriy.jfrog.io/scribe-docker-public-local/valint-pipe:latest
   variables:
     COMMAND_NAME: bom
     TARGET: busybox:latest
