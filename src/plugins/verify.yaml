@@ -6,7 +6,6 @@ variable_mapping:
   ATTESTATION: --attestation
   CONFIG: --config
   CONTEXT_TYPE: --context-type
-  FAILONERROR: --failonerror
   FILTER_REGEX: --filter-regex
   INPUT_FORMAT: --input-format
   LABEL: --label

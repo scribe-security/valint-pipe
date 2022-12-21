@@ -8,7 +8,6 @@ variable_mapping:
   CONFIG: --config
   CONTEXT_TYPE: --context-type
   ENV: --env
-  FAILONERROR: --failonerror
   FILTER_REGEX: --filter-regex
   FILTER_SCOPE: --filter-scope
   PACKAGE_GROUP: --package-group
