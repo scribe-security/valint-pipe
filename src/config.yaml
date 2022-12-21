@@ -81,10 +81,16 @@ variables:
   ENV:
     type: string
     required: false
-  FAILONERROR:
-    type: boolean
-    required: false
   FILTER_REGEX:
+    type: string
+    required: false
+  FILTER_SCOPE:
+    type: string
+    required: false
+  PACKAGE_TYPE:
+    type: string
+    required: false
+  PACKAGE_GROUP:
     type: string
     required: false
   FORCE:

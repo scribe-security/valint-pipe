@@ -10,6 +10,9 @@ variable_mapping:
   ENV: --env
   FAILONERROR: --failonerror
   FILTER_REGEX: --filter-regex
+  FILTER_SCOPE: --filter-scope
+  PACKAGE_GROUP: --package-group
+  PACKAGE_TYPE: --package-type
   FORCE: --force
   FORMAT: --format
   LABEL: --label

@@ -1,7 +1,7 @@
-name: scribe-cli
-image: scribe-security/valint-pipe:0.0.0
-description: secure your code
-repository: https://bitbucket.org/scribe-security/valint-pipe
-maintainer: scribe-security@scribesecurity.com
+name: Scribe evidence generator
+image: scribe-security/valint-pipe:0.1.0
+description: Generate Software Bill Of Materials (SBOM) for container images, filesystems and git repositories
+repository: https://github.com/scribe-security/bitbucket-pipe
+maintainer: mikey@scribesecurity.com1
 tags:
     - code security
