@@ -12,7 +12,7 @@ Scribe support evidence collecting and integrity verification for Bitbucket pipe
 Add the following snippet to the script section of your `bitbucket-pipelines.yml` file:
 
 ```yaml
-- pipe: scribe-security/valint-pipe:0.1.3
+- pipe: scribe-security/valint-pipe:0.1.4
   variables:
     COMMAND_NAME: "<string>"
     TARGET: "<string>"
@@ -69,7 +69,7 @@ Add the following snippet to the script section of your `bitbucket-pipelines.yml
 
 ## Usage
 ```yaml
- - pipe: scribe-security/valint-pipe:0.1.3
+ - pipe: scribe-security/valint-pipe:0.1.4
    variables:
     COMMAND_NAME: bom
     TARGET: busybox:latest
@@ -104,7 +104,7 @@ pipelines:
     - step:
         name: scribe-bitbucket-pipeline
         script:      
-          - pipe: scribe-security/valint-pipe:0.1.3
+          - pipe: scribe-security/valint-pipe:0.1.4
             variables:
               COMMAND_NAME: bom
               TARGET: busybox:latest 
@@ -126,14 +126,14 @@ pipelines:
         name: scribe-bitbucket-simple-test
         script:      
           - git clone -b v1.0.0-alpha.4 --single-branch https://github.com/mongo-express/mongo-express.git mongo-express-scm
-          - pipe: scribe-security/valint-pipe:0.1.3
+          - pipe: scribe-security/valint-pipe:0.1.4
             variables:
               COMMAND_NAME: bom
               TARGET: dir:mongo-express-scm
               PRODUCT_KEY: $PRODUCT_KEY
               SCRIBE_CLIENT_ID: $SCRIBE_CLIENT_ID
               SCRIBE_CLIENT_SECRET: $SCRIBE_CLIENT_SECRET
-          - pipe: scribe-security/valint-pipe:0.1.3
+          - pipe: scribe-security/valint-pipe:0.1.4
             variables:
               COMMAND_NAME: bom
               TARGET: "mongo-express:1.0.0-alpha.4" 
@@ -153,7 +153,7 @@ pipelines:
 Create SBOM from remote `busybox:latest` image.
 
 ```YAML
-  - pipe: scribe-security/valint-pipe:0.1.3
+  - pipe: scribe-security/valint-pipe:0.1.4
       variables:
         COMMAND: bom
         TARGET: busybox:latest
@@ -170,7 +170,7 @@ Create SBOM from remote `busybox:latest` image.
 Create SBOM for image built by local docker `image_name:latest` image.
 
 ```YAML
-- pipe: scribe-security/valint-pipe:0.1.3
+- pipe: scribe-security/valint-pipe:0.1.4
   variables:
     COMMAND: bom
     TARGET: image_name:latest
@@ -187,7 +187,7 @@ Create SBOM for image hosted on private registry.
 > Use `docker login` to add access.
 
 ```YAML
-- pipe: scribe-security/valint-pipe:0.1.3
+- pipe: scribe-security/valint-pipe:0.1.4
   variables:
     COMMAND: bom
     TARGET: scribesecuriy.jfrog.io/scribe-docker-local/stub_remote:latest
@@ -253,7 +253,7 @@ step:
   script:
   - mkdir testdir
   - echo "test" > testdir/test.txt
-  - pipe: scribe-security/valint-pipe:0.1.3
+  - pipe: scribe-security/valint-pipe:0.1.4
     variables:
       COMMAND: bom
       TARGET: dir:./testdir
