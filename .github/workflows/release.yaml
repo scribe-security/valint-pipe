@@ -40,10 +40,10 @@ jobs:
         run: |
           docker push scribesecuriy.jfrog.io/scribe-docker-public-local/valint-pipe --all-tags
   
-      - name: Mirror bitbucket
-        uses: pixta-dev/repository-mirroring-action@v1
-        with:
-          target_repo_url:
-            git@bitbucket.org:guycherno/bitbucket-pipe.git
-          ssh_private_key:                           
-            ${{ secrets.BITBUCKET_SSH_KEY }}
+      # - name: Mirror bitbucket
+      #   uses: pixta-dev/repository-mirroring-action@v1
+      #   with:
+      #     target_repo_url:
+      #       git@bitbucket.org:guycherno/bitbucket-pipe.git
+      #     ssh_private_key:                           
+      #       ${{ secrets.BITBUCKET_SSH_KEY }}
