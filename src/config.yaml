@@ -23,6 +23,7 @@ variables:
   OUTPUT_DIRECTORY:
     type: string
     required: false
+    default: scribe/valint
   OUTPUT_FILE:
     type: string
     required: false
