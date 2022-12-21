@@ -32,7 +32,7 @@ jobs:
         with:
           push: true
           tags: |
-            scribesecuriy.jfrog.io/scribe-docker-public-local/valint-pipe:0.1.0
+            scribesecuriy.jfrog.io/scribe-docker-public-local/valint-pipe:0.1.1
             scribesecuriy.jfrog.io/scribe-docker-public-local/valint-pipe:${GITHUB_REF#refs/*/}
 
       - name: Build and push - pre-release
