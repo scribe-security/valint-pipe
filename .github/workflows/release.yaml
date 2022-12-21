@@ -35,7 +35,7 @@ jobs:
             scribesecuriy.jfrog.io/scribe-docker-public-local/valint-pipe:0.1.1
             scribesecuriy.jfrog.io/scribe-docker-public-local/valint-pipe:${{ env.RELEASE_VERSION }} 
         env:
-            RELEASE_VERSION: ${GITHUB_REF#refs/*/}
+            RELEASE_VERSION: ${{ env.GITHUB_REF#refs/*/ }}
 
       - name: Build and push - pre-release
         uses: docker/build-push-action@v3
