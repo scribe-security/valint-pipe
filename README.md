@@ -6,7 +6,7 @@ title: Bitbucket
 # Bitbucket Pipeline
 Scribe support evidence collecting and integrity verification for Bitbucket pipelines.
 
-## Usage
+## YAML Definition
 ```yaml
 - pipe: docker://scribesecuriy.jfrog.io/scribe-docker-public-local/valint-pipe:latest
   variables:
