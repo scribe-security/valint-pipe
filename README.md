@@ -3,12 +3,16 @@ sidebar_position: 4
 title: Bitbucket
 ---
 
-# Bitbucket Pipeline
+# Bitbucket Pipelines Pipe: Scribe evidence generator
+
 Scribe support evidence collecting and integrity verification for Bitbucket pipelines.
 
 ## YAML Definition
+
+Add the following snippet to the script section of your `bitbucket-pipelines.yml` file:
+
 ```yaml
-- pipe: docker://scribesecuriy.jfrog.io/scribe-docker-public-local/valint-pipe:latest
+- pipe: docker://scribesecuriy.jfrog.io/scribe-docker-public-local/valint-pipe:0.1.0
   variables:
     COMMAND_NAME: bom
     TARGET: busybox:latest
