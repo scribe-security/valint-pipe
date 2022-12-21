@@ -1,5 +1,5 @@
 FROM scribesecuriy.jfrog.io/scribe-docker-public-local/valint:latest as valint
-FROM alpine:latest
+FROM alpine:3.17.0
 COPY --from=valint /home/scribe/valint /usr/local/bin
 RUN apk add python3 py3-pip
 ADD requirements.txt .
