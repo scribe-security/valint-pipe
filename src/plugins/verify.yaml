@@ -23,3 +23,5 @@ variable_mapping:
   SHOW: --show
   TARGET: ""
   VERBOSE: --verbose
+  OCI: --oci
+  OCI_REPO: --oci-repo

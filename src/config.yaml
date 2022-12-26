@@ -105,6 +105,12 @@ variables:
   INPUT_FORMAT:
     type: string
     required: false
+  OCI:
+    type: boolean
+    required: false
+  OCI_REPO:
+    type: string
+    required: false
 
 tags:
   - scribe
