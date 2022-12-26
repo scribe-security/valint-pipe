@@ -41,7 +41,10 @@ Add the following snippet to the script section of your `bitbucket-pipelines.yml
     # OCI_REPO: '<string>' # Optional
 ```
 
-## Variables
+<details>
+<summary> <b> Bitbucket Scribe Variables </b>
+  </summary>
+<h3>  Variables </h3>
 
 | Variable              | Usage                                                       | Default | COMMAND |
 | --------------------- | ----------------------------------------------------------- | ------- | ------- |
@@ -72,6 +75,7 @@ Add the following snippet to the script section of your `bitbucket-pipelines.yml
 | OCI | Enable OCI store  | | any |
 | OCI_REPO | Select OCI custom attestation repo  | | any |
 (*) = required variable.
+</details>
 
 ## Usage
 ```yaml
@@ -122,8 +126,10 @@ pipelines:
 <details>
   <summary>  Scribe integrity </summary>
 
-Full workflow example of a workflow, upload evidence on source and image to Scribe. <br />
-Verifying the  target integrity on Scribe.
+A full working example of a workflow - upload evidence on source code and on the final built image to Scribe.<br /> 
+Verifying the target integrity on Scribe.<br />
+This example workflow uses the public repository of the mongo-express project to demonstrate Scribe's capability to verify the integrity of a build product. <br />
+
 
   ```YAML
 pipelines:
@@ -205,9 +211,7 @@ Create SBOM for image hosted on private registry.
 <details>
   <summary>  Custom metadata (SBOM) </summary>
 
-Custom metadata added to SBOM
-Data will be included in the signed payload when the output is an attestation.
-
+Custom metadata added to SBOM.
 ```YAML
 - step:
     name: valint-image-step
@@ -227,9 +231,10 @@ Data will be included in the signed payload when the output is an attestation.
 <details>
   <summary> Save as artifact (SBOM, SLSA) </summary>
 
-Using command `OUTPUT_DIRECTORY` or `OUTPUT_FILE` to export evidence as an artifact.
+Using input variable `OUTPUT_DIRECTORY` or `OUTPUT_FILE` to export evidence as an artifact.
 
-> Use `FORMAT` to select between the format.
+> Use input variable `FORMAT` to select between the format, .
+
 
 ```YAML
 - step:
@@ -309,7 +314,7 @@ If you're new to Bitbucket pipelines this link should help you get started:
 
 ## Support
 
-If you'd like help with this pipe, or you have an issue or feature request, [let us know](https://github.com/scribe-security/valint-pipe/issues).
+If you'd like help with this pipe, or you have an issue or a feature request, [let us know](https://github.com/scribe-security/valint-pipe/issues).
 
 If you are reporting an issue, please include:
 
