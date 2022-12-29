@@ -30,6 +30,7 @@ push: &push
     name: Push and Tag
     image: python:3.7
     script:
+      - bash bump-version.sh
       - pipe: atlassian/bitbucket-pipe-release:5.0.1
         variables:
           REGISTRY_USERNAME: $DOCKER_HUB_USERNAME
