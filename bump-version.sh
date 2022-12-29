@@ -2,16 +2,20 @@
 
 # Bump versions using semversioner
 
-# set -ex
+set -ex
 
 previous_version=$(semversioner current-version)
-
+v_previous_version=v$previous_version
 # semversioner release
 
-new_version=$(semversioner next-version)
+env
 
-if [ "$ENV" == "dev" ]; then
-    new_version = "dev-latest"
+if [ "$ENV" == "dev" ]
+then
+  previous_version=$v_previous_version
+  new_version="dev-latest"
+else
+    new_version=$(semversioner next-version)
 fi
 
 # echo "Generating CHANGELOG.md file..."
@@ -25,8 +29,8 @@ fi
 # echo "Replace version '$previous_version' to '$new_version' in pipe.yml ..."
 # sed -i "s/$previous_version/$new_version/g" setup.py
 
-echo "Replace version '$previous_version' to '$new_version' in Dockerfile.yml ..."
+echo "Replace version '$previous_version' to '$new_version' in Dockerfile ..."
 sed -i "s/$previous_version/$new_version/g" Dockerfile
+cat Dockerfile
 
-# echo "Replace version '$previous_version' to '$new_version' in Dockerfile.yml ..."
-# sed -i "s/$previous_version/$new_version/g" Dockerfile_pre
+
