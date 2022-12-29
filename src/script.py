@@ -9,6 +9,17 @@ pipe = Pipe(pipe_metadata_file="/src/config.yaml")
 command_name = pipe.get_variable("COMMAND_NAME")
 target = pipe.get_variable("TARGET")
 
+print("########### 1", command_name)
+print("########### 2", target)
+if command_name == "version":
+    command_schema = yaml.safe_load(stream)
+    command = command_schema["command_prefix"]
+    print("########### 3", command)
+    exit_code = os.system(command + "--version")
+    if exit_code:
+        pipe.fail("command exited unsuccessfully", True)
+    pipe.success("Succesfully executed")
+
 with open(os.path.join("/src/","plugins", command_name + ".yaml"), "r") as stream:
     try:
         command_schema = yaml.safe_load(stream)
