@@ -39,7 +39,11 @@ with open(os.path.join("/src/","plugins", command_name + ".yaml"), "r") as strea
            
 
         logger.info("> echo $(cd " + os.getenv('BITBUCKET_WORKSPACE') + " && " + command + " )")
-        exit_code = os.system("echo $(cd " + os.getenv('BITBUCKET_WORKSPACE') + "/.. && " + command + " )")
+        if os.getenv('BITBUCKET_WORKSPACE') != None:
+            exit_code = os.system("echo $(cd " + os.getenv('BITBUCKET_WORKSPACE') + "/.. && " + command + " )")
+        else:
+            exit_code = os.system("echo $(" + command + ")")
+        
         if exit_code:
             pipe.fail("command exited unsuccessfully", True)
         pipe.success("Succesfully executed")
