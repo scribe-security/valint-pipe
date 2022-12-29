@@ -11,19 +11,18 @@ test: &test
     services:
       - docker
 
-# push-dev: &push-dev
-#   step:
-#     name: Push Dev version
-#     script:
-#       - pipe: atlassian/bitbucket-pipe-release:5.0.1
-#         variables:
-#           REGISTRY_USERNAME: $RELEASE_ARTIFACTORY_USERNAME
-#           REGISTRY_PASSWORD: $RELEASE_ARTIFACTORY_PASSWORD
-#           REGISTRY_URL: $ARTIFACTORY_URL
-#           DOCKERFILE: Dockerfile_pre
-#           IMAGE: scribesecuriy.jfrog.io/scribe-docker-public-local/$BITBUCKET_REPO_SLUG
-#           VERSION: dev-latest
-#           GIT_PUSH: 'false'
+push-dev: &push-dev
+  step:
+    name: Push Dev version
+    script:
+      - pipe: atlassian/bitbucket-pipe-release:5.0.1
+        variables:
+          REGISTRY_USERNAME: $DOCKER_HUB_USERNAME
+          REGISTRY_PASSWORD: $DOCKER_HUB_PASSWORD
+          DOCKERFILE: Dockerfile_pre
+          IMAGE: scribesecurity/$BITBUCKET_REPO_SLUG
+          VERSION: dev-latest
+          GIT_PUSH: 'false'
 
 push: &push
   step:
@@ -46,3 +45,6 @@ pipelines:
     master:
       - <<: *test
       - <<: *push
+  custom:
+    push-dev:
+      - <<: *push-dev
