@@ -19,7 +19,7 @@ push-dev: &push-dev
         variables:
           REGISTRY_USERNAME: $DOCKER_HUB_USERNAME
           REGISTRY_PASSWORD: $DOCKER_HUB_PASSWORD
-          DOCKERFILE: Dockerfile_pre
+          DOCKERFILE: ./Dockerfile_pre
           IMAGE: scribesecurity/$BITBUCKET_REPO_SLUG
           VERSION: dev-latest
           GIT_PUSH: 'false'
