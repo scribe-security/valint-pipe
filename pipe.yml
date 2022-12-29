@@ -1,5 +1,5 @@
 name: Scribe evidence generator
-image: scribesecurity/valint-pipe:0.1.1
+image: scribesecurity/valint-pipe:0.0.1
 category: Security
 description: Generate Software Bill Of Materials (SBOM) for container images, filesystems and git repositories
 repository: https://bitbucket.com/scribe-security/valint-pipe
