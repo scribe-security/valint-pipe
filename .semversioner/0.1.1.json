@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "description": "initial release test",
+      "type": "patch"
+    }
+  ],
+  "created_at": "2022-12-29T10:43:00.697379+00:00",
+  "version": "0.1.1"
+}
