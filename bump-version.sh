@@ -5,8 +5,6 @@ set -ex
 previous_version=$(semversioner current-version)
 v_previous_version=v$previous_version
 
-env
-
 if [ "$ENV" == "dev" ]
 then
   previous_version=$v_previous_version
