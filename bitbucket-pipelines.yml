@@ -15,6 +15,7 @@ push-dev: &push-dev
   step:
     name: Push Dev version
     script:
+      - ENV=dev bash bump-version.sh
       - pipe: atlassian/bitbucket-pipe-release:5.0.1
         variables:
           REGISTRY_USERNAME: $DOCKER_HUB_USERNAME
