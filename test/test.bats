@@ -1,7 +1,7 @@
 #!/usr/bin/env bats
 
 setup() {
-  DOCKER_IMAGE=${DOCKER_IMAGE:="scribe-security/valint-pipe"}
+  DOCKER_IMAGE=${DOCKER_IMAGE:="scribesecurity/valint-pipe"}
 
   echo "Building image..."
   docker build -t ${DOCKER_IMAGE}:test .

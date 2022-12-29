@@ -34,7 +34,7 @@ push: &push
         variables:
           REGISTRY_USERNAME: $DOCKER_HUB_USERNAME
           REGISTRY_PASSWORD: $DOCKER_HUB_PASSWORD
-          IMAGE: scribe-security/$BITBUCKET_REPO_SLUG
+          IMAGE: scribesecurity/$BITBUCKET_REPO_SLUG
     services:
       - docker
 
