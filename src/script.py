@@ -24,14 +24,20 @@ with open(os.path.join("/src/","plugins", command_name + ".yaml"), "r") as strea
     try:
         command_schema = yaml.safe_load(stream)
         command = command_schema["command_prefix"]
+        print("########### 4", command, command_schema)
         if  target is not None and target != "":
             command = command + " " + target
+            print("########### 5", command)
+
         for var in pipe.variables:
             if var == "COMMAND_NAME" or var == "TARGET":
                 continue
             if var in command_schema["variable_mapping"]:
                 value = pipe.get_variable(var)
                 command = command + " " + command_schema["variable_mapping"][var] + "=" + "\"" + str(pipe.get_variable(var)) + "\""
+                print("########### 6", command)
+           
+
         logger.info("> echo $(cd " + os.getenv('BITBUCKET_WORKSPACE') + " && " + command + " )")
         exit_code = os.system("echo $(cd " + os.getenv('BITBUCKET_WORKSPACE') + "/.. && " + command + " )")
         if exit_code:
