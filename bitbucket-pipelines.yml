@@ -11,9 +11,9 @@ test: &test
     services:
       - docker
 
-push-dev: &push-dev
+pre_release: &pre_release
   step:
-    name: Push Dev version
+    name: Pre release
     image: python:3.7
     script:
       - pip install semversioner
@@ -29,9 +29,9 @@ push-dev: &push-dev
     services:
       - docker
 
-push: &push
+release_tag: &release_tag
   step:
-    name: Push and Tag
+    name: Release bump version
     image: python:3.7
     script:
       - pip install semversioner
@@ -47,10 +47,12 @@ push: &push
 pipelines:
   default:
     - <<: *test
-  branches:
-    master:
-      - <<: *test
-      - <<: *push
+  # branches:
+  #   master:
+  #     - <<: *test
+  #     - <<: *release_tag
   custom:
     push-dev:
-      - <<: *push-dev
+      - <<: *pre_release
+    release_tag:
+      - <<: *release_tag
