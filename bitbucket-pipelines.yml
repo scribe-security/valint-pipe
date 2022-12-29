@@ -16,6 +16,7 @@ push-dev: &push-dev
     name: Push Dev version
     image: python:3.7
     script:
+      - pip install semversioner
       - ENV=dev bash bump-version.sh
       - pipe: atlassian/bitbucket-pipe-release:5.0.1
         variables:
@@ -27,12 +28,13 @@ push-dev: &push-dev
           GIT_PUSH: 'false'
     services:
       - docker
-      
+
 push: &push
   step:
     name: Push and Tag
     image: python:3.7
     script:
+      - pip install semversioner
       - bash bump-version.sh
       - pipe: atlassian/bitbucket-pipe-release:5.0.1
         variables:
