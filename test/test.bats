@@ -12,7 +12,7 @@ setup() {
         -e MDEV_TEST_INSTALL="true" \
         -v $(pwd):$(pwd) \
         -w $(pwd) \
-        ${DOCKER_IMAGE}:test
+        ${DOCKER_IMAGE}:test --version
 
     echo "Status: $status"
     echo "Output: $output"

@@ -1,4 +1,4 @@
-FROM scribesecuriy.jfrog.io/scribe-docker-public-local/valint:latest as valint
+FROM scribesecuriy.jfrog.io/scribe-docker-public-local/valint:v0.1.1 as valint
 FROM alpine:3.17.0
 COPY --from=valint /home/scribe/valint /usr/local/bin
 RUN apk add python3 py3-pip

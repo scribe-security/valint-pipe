@@ -1,5 +1,5 @@
 name: Scribe evidence generator
-image: scribesecuriy.jfrog.io/scribe-docker-public-local/valint-pipe:0.1.4
+image: scribesecuriy.jfrog.io/scribe-docker-public-local/valint-pipe:0.1.1
 category: Security
 description: Generate Software Bill Of Materials (SBOM) for container images, filesystems and git repositories
 repository: https://bitbucket.com/scribe-security/valint-pipe
