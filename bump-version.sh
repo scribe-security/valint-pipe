@@ -10,6 +10,10 @@ previous_version=$(semversioner current-version)
 
 new_version=$(semversioner next-version)
 
+if [ "$ENV" == "dev" ]; then
+    new_version = "dev-latest"
+fi
+
 # echo "Generating CHANGELOG.md file..."
 # semversioner changelog > CHANGELOG.md
 
