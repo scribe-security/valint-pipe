@@ -24,15 +24,13 @@ with open(os.path.join("/src/","plugins", command_name + ".yaml"), "r") as strea
         command = command_schema["command_prefix"]
         if  target is not None and target != "":
             command = command + " " + target
-
+        command = command + " " + "--context-type=bitbucket"
         for var in pipe.variables:
             if var == "COMMAND_NAME" or var == "TARGET":
                 continue
             if var in command_schema["variable_mapping"]:
                 value = pipe.get_variable(var)
                 command = command + " " + command_schema["variable_mapping"][var] + "=" + "\"" + str(pipe.get_variable(var)) + "\""
-           
-
         if os.getenv('BITBUCKET_WORKSPACE') != None:
            runCommand = "echo $(cd " + os.getenv('BITBUCKET_WORKSPACE') + "/.. && " + command + " )"
         else:

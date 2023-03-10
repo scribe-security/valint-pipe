@@ -1,68 +1,7 @@
-image: scribesecurity/valint-pipe:0.1.1
-repository: https://www.bitbucket.com/scribe-security/bitbucket-pipe
 variables:
   COMMAND_NAME:
     type: string
     required: true
-  CONFIG:
-    type: string
-    required: false
-  CONTEXT_TYPE:
-    type: string
-    required: false
-    default: bitbucket
-  INTEGRITY:
-    type: string
-    required: false
-  LABEL:
-    type: string
-    required: false
-  LEVEL:
-    type: string
-    required: false
-  OUTPUT_DIRECTORY:
-    type: string
-    required: false
-    default: scribe/valint
-  OUTPUT_FILE:
-    type: string
-    required: false
-  PRODUCT_KEY:
-    type: string
-    required: false
-  QUIET:
-    type: boolean
-    required: false
-  SCRIBE_CLIENT_ID:
-    type: string
-    required: false
-  SCRIBE_CLIENT_SECRET:
-    type: string
-    required: false
-  SCRIBE_ENABLE:
-    type: boolean
-    required: false
-  SCRIBE_URL:
-    type: string
-    required: false
-  SCRIBE_LOGIN_URL:
-    type: string
-    required: false
-  SCRIBE_AUDIENCE:
-    type: string
-    required: false
-  SECTION:
-    type: string
-    required: false
-  SHOW:
-    type: boolean
-    required: false
-  TARGET:
-    type: string
-    required: false
-  VERBOSE:
-    type: integer
-    required: false
   ATTACH_REGEX:
     type: string
     required: false
@@ -72,10 +11,28 @@ variables:
   ATTEST_DEFAULT:
     type: string
     required: false
-  ATTEST_NAME:
+  ATTESTATION:
+    type: string
+    required: false
+  BACKOFF:
+    type: string
+    required: false
+  CACHE_ENABLE:
+    type: boolean
+    required: false
+  COMMON_NAME:
     type: string
     required: false
   COMPONENTS:
+    type: string
+    required: false
+  CONFIG:
+    type: string
+    required: false
+  CONTEXT_DIR:
+    type: string
+    required: false
+  EMAIL:
     type: string
     required: false
   ENV:
@@ -87,22 +44,28 @@ variables:
   FILTER_SCOPE:
     type: string
     required: false
-  PACKAGE_TYPE:
-    type: string
-    required: false
-  PACKAGE_GROUP:
-    type: string
-    required: false
   FORCE:
     type: boolean
     required: false
   FORMAT:
     type: string
     required: false
-  ATTESTATION:
+  GIT_BRANCH:
+    type: string
+    required: false
+  GIT_COMMIT:
+    type: string
+    required: false
+  GIT_TAG:
     type: string
     required: false
   INPUT_FORMAT:
+    type: string
+    required: false
+  LABEL:
+    type: string
+    required: false
+  LEVEL:
     type: string
     required: false
   OCI:
@@ -111,8 +74,51 @@ variables:
   OCI_REPO:
     type: string
     required: false
-
-tags:
-  - scribe
-  - gensbom
-  - valint
+  OUTPUT_DIRECTORY:
+    type: string
+    required: false
+  OUTPUT_FILE:
+    type: string
+    required: false
+  PACKAGE_EXCLUDE_TYPE:
+    type: string
+    required: false
+  PACKAGE_GROUP:
+    type: string
+    required: false
+  PACKAGE_TYPE:
+    type: string
+    required: false
+  PRODUCT_KEY:
+    type: string
+    required: false
+  SCRIBE_AUTH_AUDIENCE:
+    type: string
+    required: false
+  SCRIBE_CLIENT_ID:
+    type: string
+    required: false
+  SCRIBE_CLIENT_SECRET:
+    type: string
+    required: false
+  SCRIBE_ENABLE:
+    type: boolean
+    required: false
+  SCRIBE_LOGIN_URL:
+    type: string
+    required: false
+  SCRIBE_URL:
+    type: string
+    required: false
+  TARGET:
+    type: string
+    required: true
+  TIMEOUT:
+    type: string
+    required: false
+  URI:
+    type: string
+    required: false
+  VERBOSE:
+    type: integer
+    required: false
