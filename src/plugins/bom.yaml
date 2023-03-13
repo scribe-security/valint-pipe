@@ -3,31 +3,35 @@ variable_mapping:
   ATTACH_REGEX: --attach-regex
   ATTEST_CONFIG: --attest.config
   ATTEST_DEFAULT: --attest.default
-  ATTEST_NAME: --attest.name
+  BACKOFF: --backoff
+  CACHE_ENABLE: --cache-enable
   COMPONENTS: --components
   CONFIG: --config
-  CONTEXT_TYPE: --context-type
+  CONTEXT_DIR: --context-dir
   ENV: --env
   FILTER_REGEX: --filter-regex
   FILTER_SCOPE: --filter-scope
-  PACKAGE_GROUP: --package-group
-  PACKAGE_TYPE: --package-type
   FORCE: --force
   FORMAT: --format
+  GIT_BRANCH: --git-branch
+  GIT_COMMIT: --git-commit
+  GIT_TAG: --git-tag
   LABEL: --label
   LEVEL: --level
+  OCI: --oci
+  OCI_REPO: --oci-repo
   OUTPUT_DIRECTORY: --output-directory
   OUTPUT_FILE: --output-file
+  PACKAGE_EXCLUDE_TYPE: --package-exclude-type
+  PACKAGE_GROUP: --package-group
+  PACKAGE_TYPE: --package-type
   PRODUCT_KEY: --product-key
-  QUIET: --quiet
+  SCRIBE_AUTH_AUDIENCE: --scribe.auth.audience
   SCRIBE_CLIENT_ID: --scribe.client-id
   SCRIBE_CLIENT_SECRET: --scribe.client-secret
   SCRIBE_ENABLE: --scribe.enable
-  SCRIBE_URL: --scribe.url
   SCRIBE_LOGIN_URL: --scribe.login-url
-  SCRIBE_AUDIENCE: --scribe.auth.audience
-  SHOW: --show
+  SCRIBE_URL: --scribe.url
   TARGET: ""
+  TIMEOUT: --timeout
   VERBOSE: --verbose
-  OCI: --oci
-  OCI_REPO: --oci-repo
