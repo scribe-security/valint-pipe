@@ -2,7 +2,31 @@ variables:
   COMMAND_NAME:
     type: string
     required: true
+  TARGET:
+    type: string
+    required: false
   ATTACH_REGEX:
+    type: string
+    required: false
+  COMPONENTS:
+    type: string
+    required: false
+  ENV:
+    type: string
+    required: false
+  FORCE:
+    type: boolean
+    required: false
+  FORMAT:
+    type: string
+    required: false
+  PACKAGE_EXCLUDE_TYPE:
+    type: string
+    required: false
+  PACKAGE_GROUP:
+    type: string
+    required: false
+  PACKAGE_TYPE:
     type: string
     required: false
   ATTEST_CONFIG:
@@ -11,20 +35,11 @@ variables:
   ATTEST_DEFAULT:
     type: string
     required: false
-  ATTESTATION:
-    type: string
-    required: false
   BACKOFF:
     type: string
     required: false
   CACHE_ENABLE:
     type: boolean
-    required: false
-  COMMON_NAME:
-    type: string
-    required: false
-  COMPONENTS:
-    type: string
     required: false
   CONFIG:
     type: string
@@ -32,22 +47,10 @@ variables:
   CONTEXT_DIR:
     type: string
     required: false
-  EMAIL:
-    type: string
-    required: false
-  ENV:
-    type: string
-    required: false
   FILTER_REGEX:
     type: string
     required: false
   FILTER_SCOPE:
-    type: string
-    required: false
-  FORCE:
-    type: boolean
-    required: false
-  FORMAT:
     type: string
     required: false
   GIT_BRANCH:
@@ -57,9 +60,6 @@ variables:
     type: string
     required: false
   GIT_TAG:
-    type: string
-    required: false
-  INPUT_FORMAT:
     type: string
     required: false
   LABEL:
@@ -78,15 +78,6 @@ variables:
     type: string
     required: false
   OUTPUT_FILE:
-    type: string
-    required: false
-  PACKAGE_EXCLUDE_TYPE:
-    type: string
-    required: false
-  PACKAGE_GROUP:
-    type: string
-    required: false
-  PACKAGE_TYPE:
     type: string
     required: false
   PRODUCT_KEY:
@@ -110,15 +101,24 @@ variables:
   SCRIBE_URL:
     type: string
     required: false
-  TARGET:
-    type: string
-    required: true
   TIMEOUT:
-    type: string
-    required: false
-  URI:
     type: string
     required: false
   VERBOSE:
     type: integer
+    required: false
+  ATTESTATION:
+    type: string
+    required: false
+  COMMON_NAME:
+    type: string
+    required: false
+  EMAIL:
+    type: string
+    required: false
+  INPUT_FORMAT:
+    type: string
+    required: false
+  URI:
+    type: string
     required: false

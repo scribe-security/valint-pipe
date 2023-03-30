@@ -1,18 +1,22 @@
 command_prefix: valint bom
 variable_mapping:
+  TARGET:
   ATTACH_REGEX: --attach-regex
+  COMPONENTS: --components
+  ENV: --env
+  FORCE: --force
+  FORMAT: --format
+  PACKAGE_EXCLUDE_TYPE: --package-exclude-type
+  PACKAGE_GROUP: --package-group
+  PACKAGE_TYPE: --package-type
   ATTEST_CONFIG: --attest.config
   ATTEST_DEFAULT: --attest.default
   BACKOFF: --backoff
   CACHE_ENABLE: --cache-enable
-  COMPONENTS: --components
   CONFIG: --config
   CONTEXT_DIR: --context-dir
-  ENV: --env
   FILTER_REGEX: --filter-regex
   FILTER_SCOPE: --filter-scope
-  FORCE: --force
-  FORMAT: --format
   GIT_BRANCH: --git-branch
   GIT_COMMIT: --git-commit
   GIT_TAG: --git-tag
@@ -22,9 +26,6 @@ variable_mapping:
   OCI_REPO: --oci-repo
   OUTPUT_DIRECTORY: --output-directory
   OUTPUT_FILE: --output-file
-  PACKAGE_EXCLUDE_TYPE: --package-exclude-type
-  PACKAGE_GROUP: --package-group
-  PACKAGE_TYPE: --package-type
   PRODUCT_KEY: --product-key
   SCRIBE_AUTH_AUDIENCE: --scribe.auth.audience
   SCRIBE_CLIENT_ID: --scribe.client-id
@@ -32,6 +33,5 @@ variable_mapping:
   SCRIBE_ENABLE: --scribe.enable
   SCRIBE_LOGIN_URL: --scribe.login-url
   SCRIBE_URL: --scribe.url
-  TARGET: ""
   TIMEOUT: --timeout
   VERBOSE: --verbose
