@@ -1,18 +1,23 @@
 command_prefix: valint verify
 variable_mapping:
-  ATTEST_CONFIG: --attest.config
-  ATTEST_DEFAULT: --attest.default
+  TARGET:
   ATTESTATION: --attestation
-  BACKOFF: --backoff
-  CACHE_ENABLE: --cache-enable
   COMMON_NAME: --common-name
-  CONFIG: --config
-  CONTEXT_DIR: --context-dir
   EMAIL: --email
-  FILTER_REGEX: --filter-regex
-  FILTER_SCOPE: --filter-scope
   FORCE: --force
   INPUT_FORMAT: --input-format
+  URI: --uri
+  ATTEST_CONFIG: --attest.config
+  ATTEST_DEFAULT: --attest.default
+  BACKOFF: --backoff
+  CACHE_ENABLE: --cache-enable
+  CONFIG: --config
+  CONTEXT_DIR: --context-dir
+  FILTER_REGEX: --filter-regex
+  FILTER_SCOPE: --filter-scope
+  GIT_BRANCH: --git-branch
+  GIT_COMMIT: --git-commit
+  GIT_TAG: --git-tag
   LABEL: --label
   LEVEL: --level
   OCI: --oci
@@ -26,7 +31,5 @@ variable_mapping:
   SCRIBE_ENABLE: --scribe.enable
   SCRIBE_LOGIN_URL: --scribe.login-url
   SCRIBE_URL: --scribe.url
-  TARGET: ""
   TIMEOUT: --timeout
-  URI: --uri
   VERBOSE: --verbose
