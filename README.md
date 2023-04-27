@@ -82,7 +82,7 @@ Integrating Scribe Hub with Bitbucket Pipeline requires the following credential
 * **Client ID**
 * **Client Secret**
 
-<img src='../../img/ci/integrations-secrets.jpg' alt='Scribe Integration Secrets' width='70%' min-width='400px'/>
+<img src='img/ci/integrations-secrets.jpg' alt='Scribe Integration Secrets' width='70%' min-width='400px'/>
 
 ## Scribe service integration
 Scribe provides a set of services to store, verify and manage the supply chain integrity.
@@ -147,11 +147,11 @@ Create SBOM from remote `busybox:latest` image.
 
 ```YAML
   - pipe: scribe-security/valint-pipe:0.2.0
-      variables:
-        COMMAND: bom
-        TARGET: busybox:latest
-        VERBOSE: 2
-        FORCE: "true"
+    variables:
+      COMMAND: bom
+      TARGET: busybox:latest
+      VERBOSE: 2
+      FORCE: "true"
 ``` 
 
 ###  Docker built image (SBOM)
