@@ -82,7 +82,7 @@ Integrating Scribe Hub with Bitbucket Pipeline requires the following credential
 * **Client ID**
 * **Client Secret**
 
-<img src='img/ci/integrations-secrets.jpg' alt='Scribe Integration Secrets' width='70%' min-width='400px'/>
+<img src='assets/integrations-secrets.jpg' alt='Scribe Integration Secrets' width='70%' min-width='400px'/>
 
 ## Scribe service integration
 Scribe provides a set of services to store, verify and manage the supply chain integrity.
