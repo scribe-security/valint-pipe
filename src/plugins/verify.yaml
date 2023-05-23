@@ -7,12 +7,15 @@ variable_mapping:
   FORCE: --force
   INPUT_FORMAT: --input-format
   URI: --uri
+  APP_NAME: --app-name
+  APP_VERSION: --app-version
   ATTEST_CONFIG: --attest.config
   ATTEST_DEFAULT: --attest.default
   BACKOFF: --backoff
   CACHE_ENABLE: --cache-enable
   CONFIG: --config
   CONTEXT_DIR: --context-dir
+  ENV: --env
   FILTER_REGEX: --filter-regex
   FILTER_SCOPE: --filter-scope
   GIT_BRANCH: --git-branch
@@ -24,7 +27,10 @@ variable_mapping:
   OCI_REPO: --oci-repo
   OUTPUT_DIRECTORY: --output-directory
   OUTPUT_FILE: --output-file
+  PIPELINE_NAME: --pipeline-name
+  PREDICATE_TYPE: --predicate-type
   PRODUCT_KEY: --product-key
+  PRODUCT_VERSION: --product-version
   SCRIBE_AUTH_AUDIENCE: --scribe.auth.audience
   SCRIBE_CLIENT_ID: --scribe.client-id
   SCRIBE_CLIENT_SECRET: --scribe.client-secret
