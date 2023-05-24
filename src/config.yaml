@@ -11,8 +11,8 @@ variables:
   COMPONENTS:
     type: string
     required: false
-  ENV:
-    type: string
+  COMPRESS:
+    type: boolean
     required: false
   FORCE:
     type: boolean
@@ -27,6 +27,12 @@ variables:
     type: string
     required: false
   PACKAGE_TYPE:
+    type: string
+    required: false
+  APP_NAME:
+    type: string
+    required: false
+  APP_VERSION:
     type: string
     required: false
   ATTEST_CONFIG:
@@ -45,6 +51,9 @@ variables:
     type: string
     required: false
   CONTEXT_DIR:
+    type: string
+    required: false
+  ENV:
     type: string
     required: false
   FILTER_REGEX:
@@ -80,7 +89,16 @@ variables:
   OUTPUT_FILE:
     type: string
     required: false
+  PIPELINE_NAME:
+    type: string
+    required: false
+  PREDICATE_TYPE:
+    type: string
+    required: false
   PRODUCT_KEY:
+    type: string
+    required: false
+  PRODUCT_VERSION:
     type: string
     required: false
   SCRIBE_AUTH_AUDIENCE:
