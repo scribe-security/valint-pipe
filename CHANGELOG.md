@@ -1,9 +1,13 @@
 # Changelog
 Note: version releases in the 0.x.y range may introduce breaking changes.
 
+## 0.2.1
+
+- patch: valint ghost version
+
 ## 0.2.0
 
-- minor: valint policies
+- minor: valint policy
 
 ## 0.1.2
 

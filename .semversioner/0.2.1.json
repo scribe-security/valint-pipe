@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "description": "valint ghost version",
+      "type": "patch"
+    }
+  ],
+  "created_at": "2023-05-28T08:21:21.462151+00:00",
+  "version": "0.2.1"
+}
