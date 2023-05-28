@@ -30,6 +30,26 @@ pre_release: &pre_release
       - docker
 
 release_tag: &release_tag
+    - step:
+        name: Sync GitHub Mirror
+        image: alpine/git:latest
+        clone:
+          enabled: false
+        script:
+
+mirror_sync: &mirror_sync
+  step:
+    name: Mirror Sync
+    image: alpine/git:latest
+    script:
+      - git clone --bare git@bitbucket.org:scribe-security/valint-pipe.git
+      - cd valint-pipe.git
+      - git push --mirror git@github.com:scribe-security/valint-pipe.git
+    services:
+      - docker
+
+
+release_tag: &release_tag
   step:
     name: Release bump version
     image: python:3.7
@@ -47,11 +67,13 @@ release_tag: &release_tag
 pipelines:
   default:
     - <<: *test
+    - <<: *mirror_sync
   # branches:
   #   master:
   #     - <<: *test
   #     - <<: *release_tag
   custom:
+
     push-dev:
       - <<: *pre_release
     release_tag:

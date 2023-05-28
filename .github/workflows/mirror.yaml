@@ -18,13 +18,17 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Mirror bitbucket
-        uses: pixta-dev/repository-mirroring-action@v1
-        with:
-          target_repo_url:
-            git@bitbucket.org:scribe-security/valint-pipe.git
-          ssh_private_key:                           
-            ${{ secrets.BITBUCKET_SSH_KEY }}
+      # - run: |
+      #     git fetch --all
+      #     git push --mirror git@bitbucket.org:scribe-security/valint-pipe.git
+
+      # - name: Mirror bitbucket
+      #   uses: pixta-dev/repository-mirroring-action@v1
+      #   with:
+      #     target_repo_url:
+      #       git@bitbucket.org:scribe-security/valint-pipe.git
+      #     ssh_private_key:                           
+      #       ${{ secrets.BITBUCKET_SSH_KEY }}
 
       # - name: Mirror gitlab
       #   uses: pixta-dev/repository-mirroring-action@v1
