@@ -54,14 +54,14 @@ release_tag: &release_tag
     name: Release bump version
     image: python:3.7
     script:
-      - pip install semversioner
-      - bash bump-version.sh
+      # - pip install semversioner
+      # - bash bump-version.sh
       - pipe: atlassian/bitbucket-pipe-release:5.3.2
         variables:
           REGISTRY_USERNAME: $DOCKER_HUB_USERNAME
           REGISTRY_PASSWORD: $DOCKER_HUB_PASSWORD
           IMAGE: scribesecurity/$BITBUCKET_REPO_SLUG
-          SSH_KEY: $BITBUCKET_GIT_SSH_ORIGIN
+          GIT_PUSH: false
     services:
       - docker
 
