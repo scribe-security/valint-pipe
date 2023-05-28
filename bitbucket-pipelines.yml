@@ -61,6 +61,7 @@ release_tag: &release_tag
           REGISTRY_USERNAME: $DOCKER_HUB_USERNAME
           REGISTRY_PASSWORD: $DOCKER_HUB_PASSWORD
           IMAGE: scribesecurity/$BITBUCKET_REPO_SLUG
+          SSH_KEY: $BITBUCKET_GIT_SSH_ORIGIN
     services:
       - docker
 
