@@ -67,7 +67,7 @@ release_tag: &release_tag
 pipelines:
   default:
     - <<: *test
-    - <<: *mirror_sync
+    # - <<: *mirror_sync
   # branches:
   #   master:
   #     - <<: *test

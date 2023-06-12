@@ -119,6 +119,9 @@ variables:
   SCRIBE_URL:
     type: string
     required: false
+  STRUCTURED:
+    type: boolean
+    required: false
   TIMEOUT:
     type: string
     required: false
