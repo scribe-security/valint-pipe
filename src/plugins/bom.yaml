@@ -39,5 +39,6 @@ variable_mapping:
   SCRIBE_ENABLE: --scribe.enable
   SCRIBE_LOGIN_URL: --scribe.login-url
   SCRIBE_URL: --scribe.url
+  STRUCTURED: --structured
   TIMEOUT: --timeout
   VERBOSE: --verbose
