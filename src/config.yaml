@@ -8,6 +8,15 @@ variables:
   ATTACH_REGEX:
     type: string
     required: false
+  AUTHOR_EMAIL:
+    type: string
+    required: false
+  AUTHOR_NAME:
+    type: string
+    required: false
+  AUTHOR_PHONE:
+    type: string
+    required: false
   COMPONENTS:
     type: string
     required: false
@@ -27,6 +36,18 @@ variables:
     type: string
     required: false
   PACKAGE_TYPE:
+    type: string
+    required: false
+  SUPPLIER_EMAIL:
+    type: string
+    required: false
+  SUPPLIER_NAME:
+    type: string
+    required: false
+  SUPPLIER_PHONE:
+    type: string
+    required: false
+  SUPPLIER_URL:
     type: string
     required: false
   APP_NAME:
