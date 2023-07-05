@@ -2,6 +2,9 @@ command_prefix: valint bom
 variable_mapping:
   TARGET:
   ATTACH_REGEX: --attach-regex
+  AUTHOR_EMAIL: --author-email
+  AUTHOR_NAME: --author-name
+  AUTHOR_PHONE: --author-phone
   COMPONENTS: --components
   COMPRESS: --compress
   FORCE: --force
@@ -9,6 +12,10 @@ variable_mapping:
   PACKAGE_EXCLUDE_TYPE: --package-exclude-type
   PACKAGE_GROUP: --package-group
   PACKAGE_TYPE: --package-type
+  SUPPLIER_EMAIL: --supplier-email
+  SUPPLIER_NAME: --supplier-name
+  SUPPLIER_PHONE: --supplier-phone
+  SUPPLIER_URL: --supplier-url
   APP_NAME: --app-name
   APP_VERSION: --app-version
   ATTEST_CONFIG: --attest.config
