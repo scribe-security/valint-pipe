@@ -18,7 +18,7 @@ pre_release: &pre_release
     script:
       - pip install semversioner
       - ENV=dev bash bump-version.sh
-      - pipe: atlassian/bitbucket-pipe-release:5.0.1
+      - pipe: atlassian/bitbucket-pipe-release:5.3.2
         variables:
           REGISTRY_USERNAME: $DOCKER_HUB_USERNAME
           REGISTRY_PASSWORD: $DOCKER_HUB_PASSWORD
