@@ -149,6 +149,42 @@ variables:
   VERBOSE:
     type: integer
     required: false
+  COLUMNS:
+    type: string
+    required: false
+  CURRENT:
+    type: boolean
+    required: false
+  FILTERS:
+    type: string
+    required: false
+  ALL_ENV:
+    type: boolean
+    required: false
+  BUILD_TYPE:
+    type: string
+    required: false
+  BUILDER_ID:
+    type: string
+    required: false
+  EXTERNAL:
+    type: string
+    required: false
+  FINISHED_ON:
+    type: string
+    required: false
+  INVOCATION:
+    type: string
+    required: false
+  PREDICATE:
+    type: string
+    required: false
+  STARTED_ON:
+    type: string
+    required: false
+  STATEMENT:
+    type: string
+    required: false
   ATTESTATION:
     type: string
     required: false
