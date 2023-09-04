@@ -1,12 +1,10 @@
-command_prefix: valint verify
+command_prefix: valint download
 variable_mapping:
   TARGET:
-  ATTESTATION: --attestation
-  COMMON_NAME: --common-name
-  EMAIL: --email
-  FORCE: --force
-  INPUT_FORMAT: --input-format
-  URI: --uri
+  FOLDER_PATH: --folder-path
+  FORMAT: --format
+  REF: --ref
+  STORE: --store
   ATTEST_CONFIG: --attest.config
   ATTEST_DEFAULT: --attest.default
   BACKOFF: --backoff
