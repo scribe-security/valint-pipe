@@ -1,6 +1,15 @@
 # Changelog
 Note: version releases in the 0.x.y range may introduce breaking changes.
 
+## 0.4.0
+
+- minor: slsa support
+
+## 0.3.0
+
+- minor: library refactor
+- minor: slsa initial support
+
 ## 0.2.1
 
 - patch: valint ghost version
