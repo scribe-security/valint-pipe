@@ -1,9 +1,3 @@
----
-sidebar_label: "Bitbucket"
-title: "Bitbucket Pipelines Pipe: Scribe evidence generator"
-sidebar_position: 7
----
-
 # Bitbucket Pipelines Pipe: Scribe evidence generator
 
 Scribe support evidence collecting and integrity verification for Bitbucket pipelines.
@@ -250,7 +244,7 @@ Integrating Scribe Hub with your environment requires the following credentials 
 * **Client ID**
 * **Client Secret**
 
-<img src='../../../../img/ci/integrations-secrets.jpg' alt='Scribe Integration Secrets' width='70%' min-width='400px'/>
+<img src='assets/integrations-secrets.jpg' alt='Scribe Integration Secrets' width='70%' min-width='400px'/>
 
 * Set your Scribe credentials as environment variables according to **[Bitbucket instructions](https://support.atlassian.com/bitbucket-cloud/docs/variables-and-secrets/ "Bitbucket instructions")**.
 * Use the Scribe custom pipe as shown in the example bellow
@@ -284,7 +278,7 @@ pipelines:
 
 ### Alternative evidence stores
 
-> You can learn more about alternative stores **[here](../other-evidence-stores)**.
+> You can learn more about alternative stores **[here](https://scribe-security.netlify.app/docs/integrating-scribe/other-evidence-stores)**.
 
 <details>
   <summary> <b> OCI Evidence store </b></summary>
@@ -590,15 +584,14 @@ Create SLSA for local git repository.
               FORCE: "true"
 ```
 
-### Resources
-
+## Resources
 If you're new to Bitbucket pipelines this link should help you get started:
 
-**[Bitbucket Pipelines](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/ "Get started with Bitbucket Pipelines")** - Get started with Bitbucket Pipelines.
+[Bitbucket Pipelines](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/ "Get started with Bitbucket Pipelines") - Get started with Bitbucket Pipelines.
 
-<!-- ### Support
+## Support
 
-If you'd like help with this pipe, or you have an issue or a feature request, **[let us know](https://github.com/scribe-security/valint-pipe/issues)**.
+If you'd like help with this pipe, or you have an issue or a feature request, [let us know](https://github.com/scribe-security/valint-pipe/issues).
 
 If you are reporting an issue, please include:
 
@@ -607,9 +600,9 @@ If you are reporting an issue, please include:
 - steps to reproduce
 
 By email or slack, 
-**[Contact-us](https://scribesecurity.com/contact-us/)**. -->
+[Contact-us](https://scribesecurity.com/contact-us/).
 
-<!-- ### License
+## License
 
 Copyright (c) 2019 Atlassian and others.
-Apache 2.0 licensed, see **[LICENSE](LICENSE.txt)** file. -->
+Apache 2.0 licensed, see [LICENSE](LICENSE.txt) file.
