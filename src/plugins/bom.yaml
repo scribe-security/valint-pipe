@@ -16,12 +16,12 @@ variable_mapping:
   SUPPLIER_NAME: --supplier-name
   SUPPLIER_PHONE: --supplier-phone
   SUPPLIER_URL: --supplier-url
-  APP_NAME: --app-name
-  APP_VERSION: --app-version
   ATTEST_CONFIG: --attest.config
   ATTEST_DEFAULT: --attest.default
   BACKOFF: --backoff
+  CA: --ca
   CACHE_ENABLE: --cache-enable
+  CERT: --cert
   CONFIG: --config
   CONTEXT_DIR: --context-dir
   ENV: --env
@@ -30,8 +30,11 @@ variable_mapping:
   GIT_BRANCH: --git-branch
   GIT_COMMIT: --git-commit
   GIT_TAG: --git-tag
+  KEY: --key
   LABEL: --label
   LEVEL: --level
+  LOG_CONTEXT: --log-context
+  LOG_FILE: --log-file
   OCI: --oci
   OCI_REPO: --oci-repo
   OUTPUT_DIRECTORY: --output-directory

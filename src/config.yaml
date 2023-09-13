@@ -50,12 +50,6 @@ variables:
   SUPPLIER_URL:
     type: string
     required: false
-  APP_NAME:
-    type: string
-    required: false
-  APP_VERSION:
-    type: string
-    required: false
   ATTEST_CONFIG:
     type: string
     required: false
@@ -65,8 +59,14 @@ variables:
   BACKOFF:
     type: string
     required: false
+  CA:
+    type: string
+    required: false
   CACHE_ENABLE:
     type: boolean
+    required: false
+  CERT:
+    type: string
     required: false
   CONFIG:
     type: string
@@ -92,10 +92,19 @@ variables:
   GIT_TAG:
     type: string
     required: false
+  KEY:
+    type: string
+    required: false
   LABEL:
     type: string
     required: false
   LEVEL:
+    type: string
+    required: false
+  LOG_CONTEXT:
+    type: boolean
+    required: false
+  LOG_FILE:
     type: string
     required: false
   OCI:
@@ -148,6 +157,54 @@ variables:
     required: false
   VERBOSE:
     type: integer
+    required: false
+  FOLDER_PATH:
+    type: string
+    required: false
+  REF:
+    type: string
+    required: false
+  STORE:
+    type: string
+    required: false
+  COLUMNS:
+    type: string
+    required: false
+  CURRENT:
+    type: boolean
+    required: false
+  FILTERS:
+    type: string
+    required: false
+  ALL_ENV:
+    type: boolean
+    required: false
+  BUILD_TYPE:
+    type: string
+    required: false
+  BUILDER_ID:
+    type: string
+    required: false
+  BY_PRODUCT:
+    type: string
+    required: false
+  EXTERNAL:
+    type: string
+    required: false
+  FINISHED_ON:
+    type: string
+    required: false
+  INVOCATION:
+    type: string
+    required: false
+  PREDICATE:
+    type: string
+    required: false
+  STARTED_ON:
+    type: string
+    required: false
+  STATEMENT:
+    type: string
     required: false
   ATTESTATION:
     type: string
