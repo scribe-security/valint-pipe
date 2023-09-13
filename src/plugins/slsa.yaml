@@ -1,12 +1,19 @@
-command_prefix: valint verify
+command_prefix: valint slsa
 variable_mapping:
   TARGET:
-  ATTESTATION: --attestation
-  COMMON_NAME: --common-name
-  EMAIL: --email
+  ALL_ENV: --all-env
+  BUILD_TYPE: --build-type
+  BUILDER_ID: --builder-id
+  BY_PRODUCT: --by-product
+  COMPONENTS: --components
+  EXTERNAL: --external
+  FINISHED_ON: --finished-on
   FORCE: --force
-  INPUT_FORMAT: --input-format
-  URI: --uri
+  FORMAT: --format
+  INVOCATION: --invocation
+  PREDICATE: --predicate
+  STARTED_ON: --started-on
+  STATEMENT: --statement
   ATTEST_CONFIG: --attest.config
   ATTEST_DEFAULT: --attest.default
   BACKOFF: --backoff

@@ -1,12 +1,8 @@
-command_prefix: valint verify
+command_prefix: valint list
 variable_mapping:
-  TARGET:
-  ATTESTATION: --attestation
-  COMMON_NAME: --common-name
-  EMAIL: --email
-  FORCE: --force
-  INPUT_FORMAT: --input-format
-  URI: --uri
+  COLUMNS: --columns
+  CURRENT: --current
+  FILTERS: --filters
   ATTEST_CONFIG: --attest.config
   ATTEST_DEFAULT: --attest.default
   BACKOFF: --backoff
