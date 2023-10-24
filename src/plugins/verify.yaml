@@ -7,6 +7,7 @@ variable_mapping:
   FORCE: --force
   INPUT_FORMAT: --input-format
   URI: --uri
+  ALLOW_EXPIRED: --allow-expired
   ATTEST_CONFIG: --attest.config
   ATTEST_DEFAULT: --attest.default
   BACKOFF: --backoff
@@ -15,6 +16,9 @@ variable_mapping:
   CERT: --cert
   CONFIG: --config
   CONTEXT_DIR: --context-dir
+  CRL: --crl
+  CRL_FULL_CHAIN: --crl-full-chain
+  DISABLE_CRL: --disable-crl
   ENV: --env
   FILTER_REGEX: --filter-regex
   FILTER_SCOPE: --filter-scope
@@ -31,6 +35,7 @@ variable_mapping:
   OUTPUT_DIRECTORY: --output-directory
   OUTPUT_FILE: --output-file
   PIPELINE_NAME: --pipeline-name
+  POLICY_ARGS: --policy-args
   PREDICATE_TYPE: --predicate-type
   PRODUCT_KEY: --product-key
   PRODUCT_VERSION: --product-version

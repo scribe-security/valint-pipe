@@ -50,6 +50,9 @@ variables:
   SUPPLIER_URL:
     type: string
     required: false
+  ALLOW_EXPIRED:
+    type: boolean
+    required: false
   ATTEST_CONFIG:
     type: string
     required: false
@@ -73,6 +76,15 @@ variables:
     required: false
   CONTEXT_DIR:
     type: string
+    required: false
+  CRL:
+    type: string
+    required: false
+  CRL_FULL_CHAIN:
+    type: boolean
+    required: false
+  DISABLE_CRL:
+    type: boolean
     required: false
   ENV:
     type: string
@@ -120,6 +132,9 @@ variables:
     type: string
     required: false
   PIPELINE_NAME:
+    type: string
+    required: false
+  POLICY_ARGS:
     type: string
     required: false
   PREDICATE_TYPE:
