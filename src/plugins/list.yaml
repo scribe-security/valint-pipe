@@ -14,6 +14,8 @@ variable_mapping:
   CONTEXT_DIR: --context-dir
   CRL: --crl
   CRL_FULL_CHAIN: --crl-full-chain
+  DELIVERABLE: --deliverable
+  DEPTH: --depth
   DISABLE_CRL: --disable-crl
   ENV: --env
   FILTER_REGEX: --filter-regex
@@ -31,6 +33,7 @@ variable_mapping:
   OUTPUT_DIRECTORY: --output-directory
   OUTPUT_FILE: --output-file
   PIPELINE_NAME: --pipeline-name
+  PLATFORM: --platform
   POLICY_ARGS: --policy-args
   PREDICATE_TYPE: --predicate-type
   PRODUCT_KEY: --product-key

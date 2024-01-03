@@ -83,6 +83,12 @@ variables:
   CRL_FULL_CHAIN:
     type: boolean
     required: false
+  DELIVERABLE:
+    type: string
+    required: false
+  DEPTH:
+    type: integer
+    required: false
   DISABLE_CRL:
     type: boolean
     required: false
@@ -132,6 +138,9 @@ variables:
     type: string
     required: false
   PIPELINE_NAME:
+    type: string
+    required: false
+  PLATFORM:
     type: string
     required: false
   POLICY_ARGS:
