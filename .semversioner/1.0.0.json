@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "description": "SBOM package exentation",
+      "type": "major"
+    }
+  ],
+  "created_at": "2024-01-10T13:53:14.194349+00:00",
+  "version": "1.0.0"
+}
