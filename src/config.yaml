@@ -20,9 +20,6 @@ variables:
   COMPONENTS:
     type: string
     required: false
-  COMPRESS:
-    type: boolean
-    required: false
   FORCE:
     type: boolean
     required: false
@@ -189,6 +186,27 @@ variables:
     type: string
     required: false
   STORE:
+    type: string
+    required: false
+  COMPRESS:
+    type: boolean
+    required: false
+  FORMAT_ENCODING:
+    type: string
+    required: false
+  FORMAT_TYPE:
+    type: string
+    required: false
+  FORMAT_VERSION:
+    type: string
+    required: false
+  TOOL:
+    type: string
+    required: false
+  TOOL_VENDOR:
+    type: string
+    required: false
+  TOOL_VERSION:
     type: string
     required: false
   COLUMNS:

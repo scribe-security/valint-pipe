@@ -1,20 +1,14 @@
-command_prefix: valint bom
+command_prefix: valint evidence
 variable_mapping:
   TARGET:
-  ATTACH_REGEX: --attach-regex
-  AUTHOR_EMAIL: --author-email
-  AUTHOR_NAME: --author-name
-  AUTHOR_PHONE: --author-phone
-  COMPONENTS: --components
-  FORCE: --force
+  COMPRESS: --compress
   FORMAT: --format
-  PACKAGE_EXCLUDE_TYPE: --package-exclude-type
-  PACKAGE_GROUP: --package-group
-  PACKAGE_TYPE: --package-type
-  SUPPLIER_EMAIL: --supplier-email
-  SUPPLIER_NAME: --supplier-name
-  SUPPLIER_PHONE: --supplier-phone
-  SUPPLIER_URL: --supplier-url
+  FORMAT_ENCODING: --format-encoding
+  FORMAT_TYPE: --format-type
+  FORMAT_VERSION: --format-version
+  TOOL: --tool
+  TOOL_VENDOR: --tool-vendor
+  TOOL_VERSION: --tool-version
   ALLOW_EXPIRED: --allow-expired
   ATTEST_CONFIG: --attest.config
   ATTEST_DEFAULT: --attest.default
