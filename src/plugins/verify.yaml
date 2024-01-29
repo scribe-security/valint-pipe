@@ -2,10 +2,14 @@ command_prefix: valint verify
 variable_mapping:
   TARGET:
   ATTESTATION: --attestation
+  BUNDLE: --bundle
   COMMON_NAME: --common-name
   EMAIL: --email
   FORCE: --force
   INPUT_FORMAT: --input-format
+  RULE: --rule
+  SKIP_BUNDLE: --skip-bundle
+  SKIP_REPORT: --skip-report
   URI: --uri
   ALLOW_EXPIRED: --allow-expired
   ATTEST_CONFIG: --attest.config
@@ -38,10 +42,10 @@ variable_mapping:
   OUTPUT_FILE: --output-file
   PIPELINE_NAME: --pipeline-name
   PLATFORM: --platform
-  POLICY_ARGS: --policy-args
   PREDICATE_TYPE: --predicate-type
   PRODUCT_KEY: --product-key
   PRODUCT_VERSION: --product-version
+  RULE_ARGS: --rule-args
   SCRIBE_AUTH_AUDIENCE: --scribe.auth.audience
   SCRIBE_CLIENT_ID: --scribe.client-id
   SCRIBE_CLIENT_SECRET: --scribe.client-secret

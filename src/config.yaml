@@ -140,9 +140,6 @@ variables:
   PLATFORM:
     type: string
     required: false
-  POLICY_ARGS:
-    type: string
-    required: false
   PREDICATE_TYPE:
     type: string
     required: false
@@ -150,6 +147,9 @@ variables:
     type: string
     required: false
   PRODUCT_VERSION:
+    type: string
+    required: false
+  RULE_ARGS:
     type: string
     required: false
   SCRIBE_AUTH_AUDIENCE:
@@ -251,6 +251,9 @@ variables:
   ATTESTATION:
     type: string
     required: false
+  BUNDLE:
+    type: string
+    required: false
   COMMON_NAME:
     type: string
     required: false
@@ -259,6 +262,15 @@ variables:
     required: false
   INPUT_FORMAT:
     type: string
+    required: false
+  RULE:
+    type: string
+    required: false
+  SKIP_BUNDLE:
+    type: boolean
+    required: false
+  SKIP_REPORT:
+    type: boolean
     required: false
   URI:
     type: string

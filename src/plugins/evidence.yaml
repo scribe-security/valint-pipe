@@ -40,10 +40,10 @@ variable_mapping:
   OUTPUT_FILE: --output-file
   PIPELINE_NAME: --pipeline-name
   PLATFORM: --platform
-  POLICY_ARGS: --policy-args
   PREDICATE_TYPE: --predicate-type
   PRODUCT_KEY: --product-key
   PRODUCT_VERSION: --product-version
+  RULE_ARGS: --rule-args
   SCRIBE_AUTH_AUDIENCE: --scribe.auth.audience
   SCRIBE_CLIENT_ID: --scribe.client-id
   SCRIBE_CLIENT_SECRET: --scribe.client-secret
