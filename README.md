@@ -1,5 +1,4 @@
 # Bitbucket Pipelines Pipe: Scribe evidence generator
-
 Scribe support evidence collecting and integrity verification for Bitbucket pipelines.
 
 ### YAML Definition
@@ -7,184 +6,210 @@ Scribe support evidence collecting and integrity verification for Bitbucket pipe
 Add the following snippet to the script section of your `bitbucket-pipelines.yml` file:
 
 ```yaml
-- pipe: scribe-security/valint-pipe:1.0.0
+- pipe: scribe-security/valint-pipe:1.1.0
   variables:
-    COMMAND_NAME: "<string>"  # 'bom', 'slsa' or 'verify'.
+    COMMAND_NAME: "<string>" # 'bom', 'slsa', 'evidence' or 'verify'.
     TARGET: "<string>"
-
-    # Common variables
-    # VERBOSE: "<boolean>" # Optional
-    # CONFIG: "<string>" # Optional
+    # VERBOSE: "<string>" # Optional
+    # CONFIG:"<string>" # Optional
     # FORMAT: "<string>" # Optional
-    # INPUT_FORMAT: '<string>' # Optional
-    # OUTPUT_DIRECTORY: '<boolean>' # Optional
-    # OUTPUT_FILE: '<string>' # Optional
-    # LABEL: '<string>' # Optional
-    # ENV: '<string>' # Optional
-    # FORCE: '<boolean>' # Optional
-    # GIT_BRANCH: '<string>' # Optional
-    # GIT_COMMIT: '<string>' # Optional
-    # GIT_TAG: '<string>' # Optional
-    # ATTEST_CONFIG: '<string>' # Optional
-    # ATTEST_DEFAULT: '<string>' # Optional Create evidence command
-    # SCRIBE_ENABLE: '<string>' # Optional
-    # SCRIBE_CLIENT_ID: '<string>' # Optional
-    # SCRIBE_CLIENT_SECRET: '<string>' # Optional
-    # ATTESTATION: '<string>' # Optional
-    # OCI: '<boolean>' # Optional
-    # OCI_REPO: '<string>' # Optional
-    # BACKOFF: "<string>" # Optional
-    # CA: "<string>" # Optional
-    # CACHE_ENABLE: "<boolean>" # Optional
-    # CERT: "<string>" # Optional
-    # CONTEXT_DIR: "<string>" # Optional
-    # TIMEOUT: "<string>" # Optional
-    # STRUCTURED: "<boolean>" # Optional
-    # VERBOSE: "<integer>" # Optional
-    #
-    # Bom variables
-    # COMPRESS: "<boolean>" # Optional
-    # COMPONENTS: '<string>' # Optional
-    # ATTACH_REGEX: "<string>" # Optional
-    # AUTHOR_EMAIL: "<string>" # Optional
-    # AUTHOR_NAME: "<string>" # Optional
-    # AUTHOR_PHONE: "<string>" # Optional
-    # SUPPLIER_EMAIL: "<string>" # Optional
-    # SUPPLIER_NAME: "<string>" # Optional
-    # SUPPLIER_PHONE: "<string>" # Optional
-    # SUPPLIER_URL: "<string>" # Optional
-    # FILTER_REGEX: '<string>' # Optional
-    # FILTER_SCOPE: '<string>' # Optional
-    # PACKAGE_TYPE: '<string>' # Optional
-    # PACKAGE_EXCLUDE_TYPE: '<string>' # Optional
-    # PACKAGE_GROUP: '<string>' # Optional
-    # PREDICATE: "<string>" # Optional
-    
-    # SLSA variables
-    # ALL_ENV: "<boolean>" #Optional
-    # BUILD_TYPE: "<string>" #Optional
-    # BUILDER_ID: "<string>" #Optional
-    # BY_PRODUCT: "<string>" #Optional
-    # EXTERNAL: "<string>" #Optional
-    # FINISHED_ON: "<string>" #Optional
-    # INVOCATION: "<string>" #Optional
-    # STARTED_ON: "<string>" #Optional
-    # STATEMENT: "<string>" #Optional
-    
-    # Verify variables
+    # INPUT_FORMAT: "<string>" # Optional
+    # OUTPUT_DIRECTORY: --output-directory # Optional
+    # OUTPUT_FILE: "<string>" # Optional
+    # LABEL: "<string>" # Optional
+    # ENV: "<string>" # Optional
+    # FILTER_REGEX: "<string>" # Optional
+    # FILTER_SCOPE: "<string>" # Optional
+    # PACKAGE_TYPE: "<string>" # Optional
+    # PACKAGE_GROUP: "<string>" # Optional
+    # FORCE: --force # Optional
+    # GIT_BRANCH: "<string>" # Optional
+    # GIT_COMMIT: "<string>" # Optional
+    # GIT_TAG: "<string>" # Optional
+    # ATTEST_CONFIG: "<string>" # Optional
+    # ATTEST_DEFAULT: "<string>" # Optional
+    # SCRIBE_ENABLE: "<boolean>" # Optional
+    # SCRIBE_CLIENT_ID: "<string>" # Optional
+    # SCRIBE_CLIENT_SECRET: "<string>" # Optional
     # ATTESTATION: "<string>" # Optional
+    # COMPONENTS: "<string>" # Optional
+    # OCI: "<boolean>" # Optional
+    # OCI_REPO: "<string>" # Optional
+    # BUNDLE: "<string>" # Optional
     # COMMON_NAME: "<string>" # Optional
     # EMAIL: "<string>" # Optional
-    # INPUT_FORMAT: "<string>" # Optional
+    # RULE: "<string>" # Optional
+    # SKIP_BUNDLE: "<boolean>" # Optional
+    # SKIP_REPORT: "<boolean>" # Optional
+    # URI: --uri
+    # ALLOW_EXPIRED: "<string>" # Optional
+    # BACKOFF: "<string>" # Optional
+    # CA: "<string>" # Optional
+    # CACHE_ENABLE: "<string>" # Optional
+    # CERT: "<string>" # Optional
+    # KEY: "<string>" # Optional
+    # CONTEXT_DIR: "<string>" # Optional
+    # CRL: "<string>" # Optional
+    # CRL_FULL_CHAIN: "<string>" # Optional
+    # DELIVERABLE: "<string>" # Optional
+    # DEPTH: "<integer>" # Optional
+    # DISABLE_CRL: "<boolean>" # Optional
+    # FILTER_SCOPE: "<string>" # Optional
+    # GIT_TAG: "<string>" # Optional
+    # LEVEL: "<string>" # Optional
+    # LOG_CONTEXT: "<string>" # Optional
+    # LOG_FILE: "<string>" # Optional
+    # PREDICATE_TYPE: "<string>" # Optional
+    # PRODUCT_KEY: "<string>" # Optional
+    # PRODUCT_VERSION: "<string>" # Optional
+    # RULE_ARGS: "<string>" # Optional
+    # SCRIBE_AUTH_AUDIENCE: "<string>" # Optional
+    # SCRIBE_URL: "<string>" # Optional
+    # STRUCTURED: "<string>" # Optional
+    # TIMEOUT: "<string>" # Optional
 ```
 
 ### Required Variables
 
 | Variable     | Usage                                    |
 | ------------ | ---------------------------------------- |
-| COMMAND_NAME | Name of the command to execute (bom, slsa, verify) |
-| TARGET       | Target object name format=`[docker:{image:tag}, dir:{dir_path}, git:{git_path}, docker-archive:{archive_path}, oci-archive:archive_path, registry:image:tag`] |
+| COMMAND_NAME | Name of the command to execute (`bom`, `slsa`, `evidence`, `verify`) |
 
 ### Common Variables
+Flags for all `valint` subcommands
 
-| Variable          | Usage                    |
-| ----------------- | ------------------------ |
-| attest.config     | Attestation config path  |
-| attest.default    | Attestation default config, options=[sigstore sigstore-github x509 x509-env] |
-| backoff           | Backoff duration         |
-| ca                | x509 CA Chain path       |
-| cache-enable      | Enable local cache       |
-| cert              | x509 Cert path           |
-| config            | Configuration file path  |
-| context-dir       | Context dir              |
-| context-type      | CI context type, options=[jenkins github circleci azure gitlab travis tekton bitbucket local] |
-| env               | Environment keys to include in sbom |
-| filter-regex      | Filter out files by regex |
-| git-branch        | Git branch in the repository |
-| git-commit        | Git commit hash in the repository |
-| git-tag           | Git tag in the repository |
-| key               | x509 Private key path    |
-| label             | Add Custom labels        |
-| level             | Log depth level, options=[panic fatal error warning info debug trace] |
-| log-context       | Attach context to all logs |
-| log-file          | Output log to file       |
-| oci               | Enable OCI store         |
-| oci-repo          | Select OCI custom attestation repo |
-| output-directory  | Output directory path    |
-| output-file       | Output file name         |
-| pipeline-name     | Pipeline name            |
-| predicate-type    | Custom Predicate type (generic evidence format) |
-| product-key       | Product Key              |
-| product-version   | Product Version          |
-| quiet             | Suppress all logging output |
-| scribe.client-id  | Scribe Client ID         |
-| scribe.client-secret | Scribe Client Secret  |
-| scribe.enable     | Enable scribe client     |
-| scribe.url        | Scribe API Url           |
-| structured        | Enable structured logger |
-| timeout           | Timeout duration         |
-| verbose           | Log verbosity level [-v,--verbose=1] = info, [-vv,--verbose=2] = debug |
+| Variable       | Usage                                                                                                                         | Default             |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| ALLOW_EXPIRED   | Allow expired certs                                                                                                           |                    |
+| ATTEST_CONFIG   | Attestation config path                                                                                                       |                    |
+| ATTEST_DEFAULT  | Attestation default config, options=[sigstore sigstore-github x509 x509-env]                                                  | "sigstore"         |
+| BACKOFF         | Backoff duration                                                                                                              | "15s"              |
+| CA              | x509 CA Chain path                                                                                                            |                    |
+| CACHE_ENABLE    | Enable local cache                                                                                                            | true               |
+| CERT            | x509 Cert path                                                                                                                |                    |
+| CONFIG          | Configuration file path                                                                                                       |                    |
+| CONTEXT_DIR     | Context dir                                                                                                                   |                    |
+| CONTEXT_TYPE    | CI context type, options=[jenkins github circleci azure gitlab travis tekton bitbucket local]                                 | "local"            |
+| CRL             | x509 CRL path                                                                                                                 |                    |
+| CRL_FULL_CHAIN  | Enable Full chain CRL verification                                                                                            |                    |
+| DELIVERABLE     | Mark as deliverable, options=[true, false]                                                                                    |                    |
+| DEPTH           | Git clone depth                                                                                                               |                    |
+| DISABLE_CRL     | Disable certificate revocation verification                                                                                   |                    |
+| ENV             | Environment keys to include in sbom                                                                                           |                    |
+| FILTER_REGEX    | Filter out files by regex                                                                                                     | [**/*.pyc,**/.git/**] |
+| FILTER_SCOPE    | Filter packages by scope                                                                                                      |                    |
+| GIT_BRANCH      | Git branch in the repository                                                                                                  |                    |
+| GIT_COMMIT      | Git commit hash in the repository                                                                                             |                    |
+| GIT_TAG         | Git tag in the repository                                                                                                     |                    |
+| KEY             | x509 Private key path                                                                                                         |                    |
+| LABEL           | Add Custom labels                                                                                                             |                    |
+| LEVEL           | Log depth level, options=[panic fatal error warning info debug trace]                                                         |                    |
+| LOG_CONTEXT     | Attach context to all logs                                                                                                    |                    |
+| LOG_FILE        | Output log to file                                                                                                            |                    |
+| OCI             | Enable OCI store                                                                                                              |                    |
+| OCI_REPO        | Select OCI custom attestation repo                                                                                            |                    |
+| OUTPUT_DIRECTORY| Output directory path                                                                                                         | "${XDG_CACHE_HOME}/valint" | any |
+| OUTPUT_FILE     | Output file name                                                                                                              |                    |
+| PIPELINE_NAME   | Pipeline name                                                                                                                 |                    |
+| PLATFORM        | Select target platform, examples=windows/armv6, arm64 ..)                                                                     |                    |
+| POLICY_ARGS     | Policy arguments                                                                                                              | []                 |
+| PREDICATE_TYPE  | Custom Predicate type (generic evidence format)                                                                               | "http://scribesecurity.com/evidence/generic/v0.1" | any |
+| PRODUCT_KEY     | Product Key                                                                                                                   |                    |
+| PRODUCT_VERSION | Product Version                                                                                                               |                    |
+| QUIET           | Suppress all logging output                                                                                                   |                    |
+| SCRIBE_CLIENT_ID| Scribe Client ID                                                                                                              |                    |
+| SCRIBE_CLIENT_SECRET| Scribe Client Secret                                                                                                      |                    |
+| SCRIBE_ENABLE   | Enable scribe client                                                                                                          |                    |
+| SCRIBE_URL      | Scribe API Url                                                                                                                | "https://api.scribesecurity.com" | any |
+| SHOW            | Print evidence to stdout                                                                                                      |                    |
+| STRUCTURED      | Enable structured logger                                                                                                      |                    |
+| TIMEOUT         | Timeout duration                                                                                                              | "120s"             |
+| VERBOSE         | Log verbosity level [-v,--verbose=1] = info, [-vv,--verbose=2] = debug                                                        |                    |
 
 ### Bom Command Variables
 
 if `COMMAND` is set to `bom`:
 
-| Variable          | Usage                   |
-| ----------------- | ----------------------- |
-| COMPRESS          | Compress content        |
-| COMPONENTS        | Select sbom components groups, options=[metadata layers packages syft files dep commits] |
-| ATTACH_REGEX      | Attach files content by regex |
-| AUTHOR_EMAIL      | Set author email         |
-| AUTHOR_NAME       | Set author name          |
-| AUTHOR_PHONE      | Set author phone         |
-| SUPPLIER_EMAIL    | Set supplier email       |
-| SUPPLIER_NAME     | Set supplier name        |
-| SUPPLIER_PHONE    | Set supplier phone       |
-| SUPPLIER_URL      | Set supplier URL         |
-| FILTER_REGEX      | Filter out files by regex |
-| FILTER_SCOPE      | Filter packages by scope |
-| PACKAGE_TYPE      | Select package type      |
-| PACKAGE_EXCLUDE_TYPE | Exclude package type, options=[ruby python javascript java dpkg apkdb rpm go-mod dotnet r-package rust binary sbom] |
-| PACKAGE_GROUP     | Select package group     |
-| PREDICATE         | Import predicate path    |
-
+| Variable              | Usage                                                                                                              | Default                                      
+| --------------------- | ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- |
+| TARGET (*)      | Target object name format=`[docker:{image:tag}, dir:{dir_path}, git:{git_path}, docker-archive:{archive_path}, oci-archive:archive_path, registry:image:tag`] |
+| ATTACH_REGEX          | Attach files content by regex                                                                                      | |
+| AUTHOR_EMAIL          | Set author email                                                                                                   | |
+| AUTHOR_NAME           | Set author name                                                                                                    | |
+| AUTHOR_PHONE          | Set author phone                                                                                                   | |
+| COMPONENTS            | Select sbom components groups, options=[metadata layers packages syft files dep commits]                           | [metadata,layers,packages,syft,dep,commits] |
+| FORCE                 | Force overwrite cache                                                                                              | |
+| FORMAT                | Evidence format, options=[cyclonedx-json cyclonedx-xml attest-cyclonedx-json statement-cyclonedx-json attest-slsa statement-slsa statement-generic attest-generic] | [cyclonedx-json]                            |
+| PACKAGE_EXCLUDE_TYPE  | Exclude package type, options=[ruby python javascript java dpkg apk rpm go-module dotnet r-package rust binary sbom nix conan alpm graalvm cocoapods swift dart elixir php erlang github portage haskell kernel] | |
+| PACKAGE_GROUP         | Select package group, options=all                                                                                 | |
+| PACKAGE_TYPE          | Select package type, options=[ruby python javascript java dpkg apk rpm go-module dotnet r-package rust binary sbom nix conan alpm graalvm cocoapods swift dart elixir php erlang github portage haskell kernel] | [ruby,python,javascript,java,dpkg,apk,rpm,go-module,dotnet,r-package,rust,binary,sbom,nix,conan,alpm,graalvm,cocoapods,swift,dart,elixir,php,erlang,github,portage,haskell,kernel] |
+| SUPPLIER_EMAIL        | Set supplier email                                                                                                 | |
+| SUPPLIER_NAME         | Set supplier name                                                                                                  | |
+| SUPPLIER_PHONE        | Set supplier phone                                                                                                 | |
+| SUPPLIER_URL          | Set supplier URL                                                                                                   | |
+| (*) = required variable. |                                                                                                                 | |
 ### SLSA Command Variables
 
 if `COMMAND` is set to `slsa`:
 
-| Variable       | Usage                                                          |
-| -------------- | -------------------------------------------------------------- |
-| ALL_ENV        | Attach all environment variables                              |
-| BUILD_TYPE     | Set build type                                                 |
-| BUILDER_ID     | Set builder id                                                 |
-| BY_PRODUCT     | Attach by product path                                         |
-| COMPONENTS     | Select by products components groups, options=[metadata layers packages syft files dep commits] |
-| EXTERNAL       | Add build external parameters                                  |
-| FINISHED_ON    | Set metadata finished time (YYYY-MM-DDThh:mm:ssZ)              |
-| FORCE          | Force overwrite cache                                          |
-| FORMAT         | Evidence format, options=[statement attest predicate]          |
-| INVOCATION     | Set metadata invocation ID                                     |
-| PREDICATE      | Import predicate path                                          |
-| STARTED_ON     | Set metadata started time (YYYY-MM-DDThh:mm:ssZ)              |
-| STATEMENT      | Import statement path                                          |
+| Variable       | Usage                                                          | Default |
+| -------------- | -------------------------------------------------------------- | --- |
+| TARGET (*)      | Target object name format=`[docker:{image:tag}, dir:{dir_path}, git:{git_path}, docker-archive:{archive_path}, oci-archive:archive_path, registry:image:tag`]     | |
+| ALL_ENV        | Attach all environment variables                               | |
+| BUILD_TYPE     | Set build type                                                 | |
+| BUILDER_ID     | Set builder id                                                 | |
+| BY_PRODUCT     | Attach by product path                                         | |
+| COMPONENTS     | Select by products components groups, options=[metadata layers packages syft files dep commits] | |
+| EXTERNAL       | Add build external parameters                                  | |
+| FINISHED_ON    | Set metadata finished time (YYYY-MM-DDThh:mm:ssZ)              | |
+| FORCE          | Force overwrite cache                                          | |
+| FORMAT         | Evidence format, options=[statement attest predicate]          | | 
+| INVOCATION     | Set metadata invocation ID                                     | |
+| PREDICATE      | Import predicate path                                          | |
+| STARTED_ON     | Set metadata started time (YYYY-MM-DDThh:mm:ssZ)               | |
+| STATEMENT      | Import statement path                                          | |
+| (*) = required variable. |                                                      | |
 
-### SLSA Command Variables
+### Evidence Command Variables
+
+if `COMMAND` is set to `evidence`:
+
+| Variable         | Usage                                       | Default |
+| ---------------- | ------------------------------------------- | ------- |
+| TARGET (*)      | Target object name format=`[file-path] |
+| COMPRESS         | Compress content                            |         |
+| FORMAT           | Evidence format, options=[statement attest] | [statement] |
+| FORMAT_ENCODING  | Format encoding                             |         |
+| FORMAT_TYPE      | Format type                                 |         |
+| FORMAT_VERSION   | Format version                              |         |
+| HELP             | Show help message                           |         |
+| TOOL             | Tool name                                   |         |
+| TOOL_VENDOR      | Tool vendor                                 |         |
+| TOOL_VERSION     | Tool version                                |         |
+| (*) = required variable. |                                     |         |
+
+### Verify Command Variables
 
 if `COMMAND` is set to `verify`:
 
-| Variable       | Usage                                                          |
-| -------------- | -------------------------------------------------------------- |
-| ATTESTATION    | Attestation for target                                         |
-| COMMON_NAME    | Default policy allowed common names                            |
-| EMAIL          | Default policy allowed emails                                  |
-| FORCE          | Force skip cache                                               |
-| INPUT_FORMAT   | Evidence format, options=[attest-cyclonedx-json attest-slsa statement-slsa statement-cyclonedx-json statement-generic attest-generic] |
-| URI            | Default policy allowed uris                                    |
+| Variable       | Usage                                                          | Default |
+| -------------- | -------------------------------------------------------------- | --- |
+| ATTESTATION    | Attestation for target                                         | |
+| BUNDLE         | Policy bundle uri/path (early-availability)                   | "https://github.com/scribe-public/sample-policies" |
+| COMMON_NAME    | Default policy allowed common names                            | |
+| EMAIL          | Default policy allowed emails                                  | |
+| FORCE          | Force skip cache                                               | |
+| HELP           | Show help message                                              | |
+| INPUT_FORMAT   | Evidence format, options=[attest-cyclonedx-json attest-slsa statement-slsa statement-cyclonedx-json statement-generic attest-generic] | "attest-cyclonedx-json" |
+| RULE           | Rule configuration file path (early-availability)             | |
+| SKIP_BUNDLE    | Skip bundle download                                           | |
+| SKIP_REPORT    | Skip Policy report stage                                       | |
+| URI            | Default policy allowed uris                                    | |
 
 ### Usage
 
 ```yaml
- - pipe: scribe-security/valint-pipe:1.0.0
+ - pipe: scribe-security/valint-pipe:1.1.0
    variables:
     COMMAND_NAME: bom
     TARGET: busybox:latest
@@ -257,16 +282,16 @@ pipelines:
     - step:
         name: scribe-bitbucket-pipeline
         script:    
-          - pipe: scribe-security/valint-pipe:1.0.0
+          - pipe: scribe-security/valint-pipe:1.1.0
             variables:
-              COMMAND_NAME: bom
+              COMMAND_NAME: [bom,slsa,evidence]
               TARGET:  [target]
-              FORMAT: [attest, statement, attest-slsa, statement-slsa, attest-generic, statement-generic]
+              FORMAT: [attest, statement]
               SCRIBE_ENABLE: true
               SCRIBE_CLIENT_ID: $SCRIBE_CLIENT_ID
               SCRIBE_CLIENT_SECRET: $SCRIBE_CLIENT_SECRET
 
-          - pipe: scribe-security/valint-pipe:1.0.0
+          - pipe: scribe-security/valint-pipe:1.1.0
             variables:
               COMMAND_NAME: verify
               TARGET:  [target]
@@ -310,15 +335,15 @@ pipelines:
         name: scribe-bitbucket-oci-pipeline
         script:    
           - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD [my_registry]
-          - pipe: scribe-security/valint-pipe:1.0.0
+          - pipe: scribe-security/valint-pipe:1.1.0
             variables:
-              COMMAND_NAME: bom
+              COMMAND_NAME: [bom,slsa,evidence]
               TARGET:  [target]
-              FORMAT: [attest, statement, attest-slsa (depricated), statement-slsa(depricated), attest-generic, statement-generic]
+              FORMAT: [attest, statement]
               OCI: true
               OCI_REPO: [oci_repo]
 
-          - pipe: scribe-security/valint-pipe:1.0.0
+          - pipe: scribe-security/valint-pipe:1.1.0
             variables:
               COMMAND_NAME: verify
               TARGET:  [target]
@@ -336,7 +361,7 @@ pipelines:
 Create SBOM from remote `busybox:latest` image.
 
 ```YAML
-  - pipe: scribe-security/valint-pipe:1.0.0
+  - pipe: scribe-security/valint-pipe:1.1.0
       variables:
         COMMAND: bom
         TARGET: busybox:latest
@@ -348,10 +373,21 @@ Create SBOM from remote `busybox:latest` image.
 Create slsa from remote `busybox:latest` image.
 
 ```YAML
-  - pipe: scribe-security/valint-pipe:1.0.0
+  - pipe: scribe-security/valint-pipe:1.1.0
       variables:
         COMMAND: slsa
         TARGET: busybox:latest
+```
+
+### Attach third-parth Evidence (Evidence)
+
+Include some third-parth tool as evidence
+
+```YAML
+  - pipe: scribe-security/valint-pipe:1.1.0
+      variables:
+        COMMAND: evidence
+        TARGET: some_security_report.json
 ```
 
 ### Docker built image (SBOM)
@@ -359,7 +395,7 @@ Create slsa from remote `busybox:latest` image.
 Create SBOM for image built by local docker `image_name:latest` image.
 
 ```YAML
-- pipe: scribe-security/valint-pipe:1.0.0
+- pipe: scribe-security/valint-pipe:1.1.0
   variables:
     COMMAND: bom
     TARGET: image_name:latest
@@ -372,7 +408,7 @@ Create SBOM for image built by local docker `image_name:latest` image.
 Create SLSA for image built by local docker `image_name:latest` image.
 
 ```YAML
-- pipe: scribe-security/valint-pipe:1.0.0
+- pipe: scribe-security/valint-pipe:1.1.0
   variables:
     COMMAND: slsa
     TARGET: image_name:latest
@@ -386,7 +422,7 @@ Create SBOM for image hosted on private registry.
 > Use `docker login` to add access.
 
 ```YAML
-- pipe: scribe-security/valint-pipe:1.0.0
+- pipe: scribe-security/valint-pipe:1.1.0
   variables:
     COMMAND: bom
     TARGET: scribesecurity.jfrog.io/scribe-docker-local/example:latest
@@ -400,7 +436,7 @@ Create SLSA for image hosted on private registry.
 > Use `docker login` to add access.
 
 ```YAML
-- pipe: scribe-security/valint-pipe:1.0.0
+- pipe: scribe-security/valint-pipe:1.1.0
   variables:
     COMMAND: slsa
     TARGET: scribesecurity.jfrog.io/scribe-docker-local/example:latest
@@ -496,7 +532,7 @@ step:
   script:
   - mkdir testdir
   - echo "test" > testdir/test.txt
-  - pipe: scribe-security/valint-pipe:1.0.0
+  - pipe: scribe-security/valint-pipe:1.1.0
     variables:
       COMMAND: bom
       TARGET: dir:./testdir
@@ -514,7 +550,7 @@ step:
   script:
   - mkdir testdir
   - echo "test" > testdir/test.txt
-  - pipe: scribe-security/valint-pipe:1.0.0
+  - pipe: scribe-security/valint-pipe:1.1.0
     variables:
       COMMAND: slsa
       TARGET: dir:./testdir
