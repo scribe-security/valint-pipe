@@ -98,6 +98,12 @@ variables:
   FILTER_SCOPE:
     type: string
     required: false
+  GATE:
+    type: string
+    required: false
+  GIT_AUTH:
+    type: string
+    required: false
   GIT_BRANCH:
     type: string
     required: false
@@ -179,13 +185,25 @@ variables:
   VERBOSE:
     type: integer
     required: false
-  FOLDER_PATH:
-    type: string
+  CURRENT:
+    type: boolean
+    required: false
+  INTERACTIVE:
+    type: boolean
     required: false
   REF:
     type: string
     required: false
+  SILENT:
+    type: boolean
+    required: false
   STORE:
+    type: string
+    required: false
+  FOLDER_PATH:
+    type: string
+    required: false
+  PAYLOAD:
     type: string
     required: false
   COMPRESS:
@@ -209,11 +227,11 @@ variables:
   TOOL_VERSION:
     type: string
     required: false
+  ALL:
+    type: boolean
+    required: false
   COLUMNS:
     type: string
-    required: false
-  CURRENT:
-    type: boolean
     required: false
   FILTERS:
     type: string
@@ -260,10 +278,19 @@ variables:
   EMAIL:
     type: string
     required: false
+  INITIATIVE:
+    type: string
+    required: false
   INPUT_FORMAT:
     type: string
     required: false
+  POLICY:
+    type: string
+    required: false
   RULE:
+    type: string
+    required: false
+  RULE_LABEL:
     type: string
     required: false
   SKIP_BUNDLE:
