@@ -1,8 +1,17 @@
 command_prefix: valint list
 variable_mapping:
+  ALL: --all
   COLUMNS: --columns
   CURRENT: --current
   FILTERS: --filters
+  FORMAT: --format
+  FORMAT_ENCODING: --format-encoding
+  FORMAT_TYPE: --format-type
+  FORMAT_VERSION: --format-version
+  OUTPUT_FILE: --output-file
+  TOOL: --tool
+  TOOL_VENDOR: --tool-vendor
+  TOOL_VERSION: --tool-version
   ALLOW_EXPIRED: --allow-expired
   ATTEST_CONFIG: --attest.config
   ATTEST_DEFAULT: --attest.default
@@ -20,6 +29,8 @@ variable_mapping:
   ENV: --env
   FILTER_REGEX: --filter-regex
   FILTER_SCOPE: --filter-scope
+  GATE: --gate
+  GIT_AUTH: --git-auth
   GIT_BRANCH: --git-branch
   GIT_COMMIT: --git-commit
   GIT_TAG: --git-tag
@@ -31,7 +42,6 @@ variable_mapping:
   OCI: --oci
   OCI_REPO: --oci-repo
   OUTPUT_DIRECTORY: --output-directory
-  OUTPUT_FILE: --output-file
   PIPELINE_NAME: --pipeline-name
   PLATFORM: --platform
   PREDICATE_TYPE: --predicate-type

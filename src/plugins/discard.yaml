@@ -1,19 +1,11 @@
-command_prefix: valint slsa
+command_prefix: valint discard
 variable_mapping:
   TARGET:
-  ALL_ENV: --all-env
-  BUILD_TYPE: --build-type
-  BUILDER_ID: --builder-id
-  BY_PRODUCT: --by-product
-  COMPONENTS: --components
-  EXTERNAL: --external
-  FINISHED_ON: --finished-on
-  FORCE: --force
-  FORMAT: --format
-  INVOCATION: --invocation
-  PREDICATE: --predicate
-  STARTED_ON: --started-on
-  STATEMENT: --statement
+  CURRENT: --current
+  INTERACTIVE: --interactive
+  REF: --ref
+  SILENT: --silent
+  STORE: --store
   ALLOW_EXPIRED: --allow-expired
   ATTEST_CONFIG: --attest.config
   ATTEST_DEFAULT: --attest.default

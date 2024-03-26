@@ -3,6 +3,7 @@ variable_mapping:
   TARGET:
   FOLDER_PATH: --folder-path
   FORMAT: --format
+  PAYLOAD: --payload
   REF: --ref
   STORE: --store
   ALLOW_EXPIRED: --allow-expired
@@ -22,6 +23,8 @@ variable_mapping:
   ENV: --env
   FILTER_REGEX: --filter-regex
   FILTER_SCOPE: --filter-scope
+  GATE: --gate
+  GIT_AUTH: --git-auth
   GIT_BRANCH: --git-branch
   GIT_COMMIT: --git-commit
   GIT_TAG: --git-tag
