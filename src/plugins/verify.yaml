@@ -6,8 +6,11 @@ variable_mapping:
   COMMON_NAME: --common-name
   EMAIL: --email
   FORCE: --force
+  INITIATIVE: --initiative
   INPUT_FORMAT: --input-format
+  POLICY: --policy
   RULE: --rule
+  RULE_LABEL: --rule-label
   SKIP_BUNDLE: --skip-bundle
   SKIP_REPORT: --skip-report
   URI: --uri
@@ -28,6 +31,8 @@ variable_mapping:
   ENV: --env
   FILTER_REGEX: --filter-regex
   FILTER_SCOPE: --filter-scope
+  GATE: --gate
+  GIT_AUTH: --git-auth
   GIT_BRANCH: --git-branch
   GIT_COMMIT: --git-commit
   GIT_TAG: --git-tag
