@@ -1,6 +1,14 @@
 # Changelog
 Note: version releases in the 0.x.y range may introduce breaking changes.
 
+## 1.3.0
+
+- minor: Policy as Code, CycloneDX 1.5 support
+
+## 1.2.0
+
+- minor: Discard support
+
 ## 1.1.1
 
 - patch: hotfix attest deilverable default
