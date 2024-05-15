@@ -218,6 +218,9 @@ variables:
   FORMAT_VERSION:
     type: string
     required: false
+  PARSER:
+    type: string
+    required: false
   TOOL:
     type: string
     required: false

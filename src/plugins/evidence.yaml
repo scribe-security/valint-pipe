@@ -6,6 +6,7 @@ variable_mapping:
   FORMAT_ENCODING: --format-encoding
   FORMAT_TYPE: --format-type
   FORMAT_VERSION: --format-version
+  PARSER: --parser
   TOOL: --tool
   TOOL_VENDOR: --tool-vendor
   TOOL_VERSION: --tool-version
