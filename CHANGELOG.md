@@ -1,6 +1,15 @@
 # Changelog
 Note: version releases in the 0.x.y range may introduce breaking changes.
 
+## 1.4.2
+
+- patch: parser flag
+
+## 1.4.1
+
+- patch: parser flag
+- patch: parser flag
+
 ## 1.4.0
 
 - minor: single client secret API

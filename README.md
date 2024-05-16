@@ -6,7 +6,7 @@ Scribe support evidence collecting and integrity verification for Bitbucket pipe
 Add the following snippet to the script section of your `bitbucket-pipelines.yml` file:
 
 ```yaml
-- pipe: scribe-security/valint-pipe:1.4.0
+- pipe: scribe-security/valint-pipe:1.4.2
   variables:
     COMMAND_NAME: "<string>" # 'bom', 'slsa', 'evidence' or 'verify'.
     TARGET: "<string>"
@@ -209,7 +209,7 @@ if `COMMAND` is set to `verify`:
 ### Usage
 
 ```yaml
- - pipe: scribe-security/valint-pipe:1.4.0
+ - pipe: scribe-security/valint-pipe:1.4.2
    variables:
     COMMAND_NAME: bom
     TARGET: busybox:latest
@@ -282,7 +282,7 @@ pipelines:
     - step:
         name: scribe-bitbucket-pipeline
         script:    
-          - pipe: scribe-security/valint-pipe:1.4.0
+          - pipe: scribe-security/valint-pipe:1.4.2
             variables:
               COMMAND_NAME: [bom,slsa,evidence]
               TARGET:  [target]
@@ -291,7 +291,7 @@ pipelines:
               SCRIBE_CLIENT_ID: $SCRIBE_CLIENT_ID
               SCRIBE_CLIENT_SECRET: $SCRIBE_CLIENT_SECRET
 
-          - pipe: scribe-security/valint-pipe:1.4.0
+          - pipe: scribe-security/valint-pipe:1.4.2
             variables:
               COMMAND_NAME: verify
               TARGET:  [target]
@@ -335,7 +335,7 @@ pipelines:
         name: scribe-bitbucket-oci-pipeline
         script:    
           - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD [my_registry]
-          - pipe: scribe-security/valint-pipe:1.4.0
+          - pipe: scribe-security/valint-pipe:1.4.2
             variables:
               COMMAND_NAME: [bom,slsa,evidence]
               TARGET:  [target]
@@ -343,7 +343,7 @@ pipelines:
               OCI: true
               OCI_REPO: [oci_repo]
 
-          - pipe: scribe-security/valint-pipe:1.4.0
+          - pipe: scribe-security/valint-pipe:1.4.2
             variables:
               COMMAND_NAME: verify
               TARGET:  [target]
@@ -361,7 +361,7 @@ pipelines:
 Create SBOM from remote `busybox:latest` image.
 
 ```YAML
-  - pipe: scribe-security/valint-pipe:1.4.0
+  - pipe: scribe-security/valint-pipe:1.4.2
       variables:
         COMMAND: bom
         TARGET: busybox:latest
@@ -373,7 +373,7 @@ Create SBOM from remote `busybox:latest` image.
 Create slsa from remote `busybox:latest` image.
 
 ```YAML
-  - pipe: scribe-security/valint-pipe:1.4.0
+  - pipe: scribe-security/valint-pipe:1.4.2
       variables:
         COMMAND: slsa
         TARGET: busybox:latest
@@ -384,7 +384,7 @@ Create slsa from remote `busybox:latest` image.
 Include some third-parth tool as evidence
 
 ```YAML
-  - pipe: scribe-security/valint-pipe:1.4.0
+  - pipe: scribe-security/valint-pipe:1.4.2
       variables:
         COMMAND: evidence
         TARGET: some_security_report.json
@@ -395,7 +395,7 @@ Include some third-parth tool as evidence
 Create SBOM for image built by local docker `image_name:latest` image.
 
 ```YAML
-- pipe: scribe-security/valint-pipe:1.4.0
+- pipe: scribe-security/valint-pipe:1.4.2
   variables:
     COMMAND: bom
     TARGET: image_name:latest
@@ -408,7 +408,7 @@ Create SBOM for image built by local docker `image_name:latest` image.
 Create SLSA for image built by local docker `image_name:latest` image.
 
 ```YAML
-- pipe: scribe-security/valint-pipe:1.4.0
+- pipe: scribe-security/valint-pipe:1.4.2
   variables:
     COMMAND: slsa
     TARGET: image_name:latest
@@ -422,7 +422,7 @@ Create SBOM for image hosted on private registry.
 > Use `docker login` to add access.
 
 ```YAML
-- pipe: scribe-security/valint-pipe:1.4.0
+- pipe: scribe-security/valint-pipe:1.4.2
   variables:
     COMMAND: bom
     TARGET: scribesecurity.jfrog.io/scribe-docker-local/example:latest
@@ -436,7 +436,7 @@ Create SLSA for image hosted on private registry.
 > Use `docker login` to add access.
 
 ```YAML
-- pipe: scribe-security/valint-pipe:1.4.0
+- pipe: scribe-security/valint-pipe:1.4.2
   variables:
     COMMAND: slsa
     TARGET: scribesecurity.jfrog.io/scribe-docker-local/example:latest
@@ -532,7 +532,7 @@ step:
   script:
   - mkdir testdir
   - echo "test" > testdir/test.txt
-  - pipe: scribe-security/valint-pipe:1.4.0
+  - pipe: scribe-security/valint-pipe:1.4.2
     variables:
       COMMAND: bom
       TARGET: dir:./testdir
@@ -550,7 +550,7 @@ step:
   script:
   - mkdir testdir
   - echo "test" > testdir/test.txt
-  - pipe: scribe-security/valint-pipe:1.4.0
+  - pipe: scribe-security/valint-pipe:1.4.2
     variables:
       COMMAND: slsa
       TARGET: dir:./testdir
