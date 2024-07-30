@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "description": "scribe disable instead of enable, flag cleanup",
+      "type": "minor"
+    }
+  ],
+  "created_at": "2024-07-30T09:55:22+00:00",
+  "version": "1.5.0"
+}
