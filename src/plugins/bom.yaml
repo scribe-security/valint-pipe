@@ -2,61 +2,58 @@ command_prefix: valint bom
 variable_mapping:
   TARGET:
   ATTACH_REGEX: --attach-regex
+  ATTEST_CONFIG: --attest.config
+  ATTEST_DEFAULT: --attest.default
   AUTHOR_EMAIL: --author-email
   AUTHOR_NAME: --author-name
   AUTHOR_PHONE: --author-phone
-  COMPONENTS: --components
-  FORCE: --force
-  FORMAT: --format
-  PACKAGE_EXCLUDE_TYPE: --package-exclude-type
-  PACKAGE_GROUP: --package-group
-  PACKAGE_TYPE: --package-type
-  SUPPLIER_EMAIL: --supplier-email
-  SUPPLIER_NAME: --supplier-name
-  SUPPLIER_PHONE: --supplier-phone
-  SUPPLIER_URL: --supplier-url
-  ALLOW_EXPIRED: --allow-expired
-  ATTEST_CONFIG: --attest.config
-  ATTEST_DEFAULT: --attest.default
-  BACKOFF: --backoff
   CA: --ca
-  CACHE_ENABLE: --cache-enable
   CERT: --cert
-  CONFIG: --config
-  CONTEXT_DIR: --context-dir
+  COMPONENTS: --components
   CRL: --crl
   CRL_FULL_CHAIN: --crl-full-chain
-  DELIVERABLE: --deliverable
   DEPTH: --depth
   DISABLE_CRL: --disable-crl
-  ENV: --env
   FILTER_REGEX: --filter-regex
   FILTER_SCOPE: --filter-scope
-  GATE: --gate
+  FORCE: --force
+  FORMAT: --format
   GIT_AUTH: --git-auth
   GIT_BRANCH: --git-branch
   GIT_COMMIT: --git-commit
   GIT_TAG: --git-tag
   KEY: --key
+  OCI: --oci
+  OCI_REPO: --oci-repo
+  PACKAGE_EXCLUDE_TYPE: --package-exclude-type
+  PACKAGE_GROUP: --package-group
+  PACKAGE_TYPE: --package-type
+  PAYLOAD: --payload
+  PLATFORM: --platform
+  PROVENANCE: --provenance
+  SUPPLIER_EMAIL: --supplier-email
+  SUPPLIER_NAME: --supplier-name
+  SUPPLIER_PHONE: --supplier-phone
+  SUPPLIER_URL: --supplier-url
+  CACHE_ENABLE: --cache-enable
+  CONFIG: --config
+  DELIVERABLE: --deliverable
+  ENV: --env
+  GATE: --gate
   LABEL: --label
   LEVEL: --level
   LOG_CONTEXT: --log-context
   LOG_FILE: --log-file
-  OCI: --oci
-  OCI_REPO: --oci-repo
   OUTPUT_DIRECTORY: --output-directory
   OUTPUT_FILE: --output-file
   PIPELINE_NAME: --pipeline-name
-  PLATFORM: --platform
   PREDICATE_TYPE: --predicate-type
   PRODUCT_KEY: --product-key
   PRODUCT_VERSION: --product-version
-  RULE_ARGS: --rule-args
-  SCRIBE_AUTH_AUDIENCE: --scribe.auth.audience
   SCRIBE_CLIENT_ID: --scribe.client-id
   SCRIBE_CLIENT_SECRET: --scribe.client-secret
+  SCRIBE_DISABLE: --scribe.disable
   SCRIBE_ENABLE: --scribe.enable
-  SCRIBE_LOGIN_URL: --scribe.login-url
   SCRIBE_URL: --scribe.url
   STRUCTURED: --structured
   TIMEOUT: --timeout

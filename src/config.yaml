@@ -8,6 +8,12 @@ variables:
   ATTACH_REGEX:
     type: string
     required: false
+  ATTEST_CONFIG:
+    type: string
+    required: false
+  ATTEST_DEFAULT:
+    type: string
+    required: false
   AUTHOR_EMAIL:
     type: string
     required: false
@@ -17,61 +23,13 @@ variables:
   AUTHOR_PHONE:
     type: string
     required: false
-  COMPONENTS:
-    type: string
-    required: false
-  FORCE:
-    type: boolean
-    required: false
-  FORMAT:
-    type: string
-    required: false
-  PACKAGE_EXCLUDE_TYPE:
-    type: string
-    required: false
-  PACKAGE_GROUP:
-    type: string
-    required: false
-  PACKAGE_TYPE:
-    type: string
-    required: false
-  SUPPLIER_EMAIL:
-    type: string
-    required: false
-  SUPPLIER_NAME:
-    type: string
-    required: false
-  SUPPLIER_PHONE:
-    type: string
-    required: false
-  SUPPLIER_URL:
-    type: string
-    required: false
-  ALLOW_EXPIRED:
-    type: boolean
-    required: false
-  ATTEST_CONFIG:
-    type: string
-    required: false
-  ATTEST_DEFAULT:
-    type: string
-    required: false
-  BACKOFF:
-    type: string
-    required: false
   CA:
     type: string
-    required: false
-  CACHE_ENABLE:
-    type: boolean
     required: false
   CERT:
     type: string
     required: false
-  CONFIG:
-    type: string
-    required: false
-  CONTEXT_DIR:
+  COMPONENTS:
     type: string
     required: false
   CRL:
@@ -80,17 +38,11 @@ variables:
   CRL_FULL_CHAIN:
     type: boolean
     required: false
-  DELIVERABLE:
-    type: string
-    required: false
   DEPTH:
     type: integer
     required: false
   DISABLE_CRL:
     type: boolean
-    required: false
-  ENV:
-    type: string
     required: false
   FILTER_REGEX:
     type: string
@@ -98,7 +50,10 @@ variables:
   FILTER_SCOPE:
     type: string
     required: false
-  GATE:
+  FORCE:
+    type: boolean
+    required: false
+  FORMAT:
     type: string
     required: false
   GIT_AUTH:
@@ -116,6 +71,57 @@ variables:
   KEY:
     type: string
     required: false
+  OCI:
+    type: boolean
+    required: false
+  OCI_REPO:
+    type: string
+    required: false
+  PACKAGE_EXCLUDE_TYPE:
+    type: string
+    required: false
+  PACKAGE_GROUP:
+    type: string
+    required: false
+  PACKAGE_TYPE:
+    type: string
+    required: false
+  PAYLOAD:
+    type: string
+    required: false
+  PLATFORM:
+    type: string
+    required: false
+  PROVENANCE:
+    type: boolean
+    required: false
+  SUPPLIER_EMAIL:
+    type: string
+    required: false
+  SUPPLIER_NAME:
+    type: string
+    required: false
+  SUPPLIER_PHONE:
+    type: string
+    required: false
+  SUPPLIER_URL:
+    type: string
+    required: false
+  CACHE_ENABLE:
+    type: boolean
+    required: false
+  CONFIG:
+    type: string
+    required: false
+  DELIVERABLE:
+    type: string
+    required: false
+  ENV:
+    type: string
+    required: false
+  GATE:
+    type: string
+    required: false
   LABEL:
     type: string
     required: false
@@ -128,12 +134,6 @@ variables:
   LOG_FILE:
     type: string
     required: false
-  OCI:
-    type: boolean
-    required: false
-  OCI_REPO:
-    type: string
-    required: false
   OUTPUT_DIRECTORY:
     type: string
     required: false
@@ -141,9 +141,6 @@ variables:
     type: string
     required: false
   PIPELINE_NAME:
-    type: string
-    required: false
-  PLATFORM:
     type: string
     required: false
   PREDICATE_TYPE:
@@ -155,23 +152,17 @@ variables:
   PRODUCT_VERSION:
     type: string
     required: false
-  RULE_ARGS:
-    type: string
-    required: false
-  SCRIBE_AUTH_AUDIENCE:
-    type: string
-    required: false
   SCRIBE_CLIENT_ID:
     type: string
     required: false
   SCRIBE_CLIENT_SECRET:
     type: string
     required: false
-  SCRIBE_ENABLE:
+  SCRIBE_DISABLE:
     type: boolean
     required: false
-  SCRIBE_LOGIN_URL:
-    type: string
+  SCRIBE_ENABLE:
+    type: boolean
     required: false
   SCRIBE_URL:
     type: string
@@ -201,9 +192,6 @@ variables:
     type: string
     required: false
   FOLDER_PATH:
-    type: string
-    required: false
-  PAYLOAD:
     type: string
     required: false
   COMPRESS:
@@ -275,6 +263,21 @@ variables:
   BUNDLE:
     type: string
     required: false
+  BUNDLE_AUTH:
+    type: string
+    required: false
+  BUNDLE_BRANCH:
+    type: string
+    required: false
+  BUNDLE_COMMIT:
+    type: string
+    required: false
+  BUNDLE_DEPTH:
+    type: integer
+    required: false
+  BUNDLE_TAG:
+    type: string
+    required: false
   COMMON_NAME:
     type: string
     required: false
@@ -291,6 +294,9 @@ variables:
     type: string
     required: false
   RULE:
+    type: string
+    required: false
+  RULE_ARGS:
     type: string
     required: false
   RULE_LABEL:

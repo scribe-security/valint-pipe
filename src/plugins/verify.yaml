@@ -1,61 +1,60 @@
 command_prefix: valint verify
 variable_mapping:
   TARGET:
-  ATTESTATION: --attestation
-  BUNDLE: --bundle
-  COMMON_NAME: --common-name
-  EMAIL: --email
-  FORCE: --force
-  INITIATIVE: --initiative
-  INPUT_FORMAT: --input-format
-  POLICY: --policy
-  RULE: --rule
-  RULE_LABEL: --rule-label
-  SKIP_BUNDLE: --skip-bundle
-  SKIP_REPORT: --skip-report
-  URI: --uri
-  ALLOW_EXPIRED: --allow-expired
   ATTEST_CONFIG: --attest.config
   ATTEST_DEFAULT: --attest.default
-  BACKOFF: --backoff
+  ATTESTATION: --attestation
+  BUNDLE: --bundle
+  BUNDLE_AUTH: --bundle-auth
+  BUNDLE_BRANCH: --bundle-branch
+  BUNDLE_COMMIT: --bundle-commit
+  BUNDLE_DEPTH: --bundle-depth
+  BUNDLE_TAG: --bundle-tag
   CA: --ca
-  CACHE_ENABLE: --cache-enable
   CERT: --cert
-  CONFIG: --config
-  CONTEXT_DIR: --context-dir
+  COMMON_NAME: --common-name
   CRL: --crl
   CRL_FULL_CHAIN: --crl-full-chain
-  DELIVERABLE: --deliverable
   DEPTH: --depth
   DISABLE_CRL: --disable-crl
-  ENV: --env
-  FILTER_REGEX: --filter-regex
-  FILTER_SCOPE: --filter-scope
-  GATE: --gate
+  EMAIL: --email
+  FORCE: --force
   GIT_AUTH: --git-auth
   GIT_BRANCH: --git-branch
   GIT_COMMIT: --git-commit
   GIT_TAG: --git-tag
+  INITIATIVE: --initiative
+  INPUT_FORMAT: --input-format
   KEY: --key
+  OCI: --oci
+  OCI_REPO: --oci-repo
+  PLATFORM: --platform
+  POLICY: --policy
+  RULE: --rule
+  RULE_ARGS: --rule-args
+  RULE_LABEL: --rule-label
+  SKIP_BUNDLE: --skip-bundle
+  SKIP_REPORT: --skip-report
+  URI: --uri
+  CACHE_ENABLE: --cache-enable
+  CONFIG: --config
+  DELIVERABLE: --deliverable
+  ENV: --env
+  GATE: --gate
   LABEL: --label
   LEVEL: --level
   LOG_CONTEXT: --log-context
   LOG_FILE: --log-file
-  OCI: --oci
-  OCI_REPO: --oci-repo
   OUTPUT_DIRECTORY: --output-directory
   OUTPUT_FILE: --output-file
   PIPELINE_NAME: --pipeline-name
-  PLATFORM: --platform
   PREDICATE_TYPE: --predicate-type
   PRODUCT_KEY: --product-key
   PRODUCT_VERSION: --product-version
-  RULE_ARGS: --rule-args
-  SCRIBE_AUTH_AUDIENCE: --scribe.auth.audience
   SCRIBE_CLIENT_ID: --scribe.client-id
   SCRIBE_CLIENT_SECRET: --scribe.client-secret
+  SCRIBE_DISABLE: --scribe.disable
   SCRIBE_ENABLE: --scribe.enable
-  SCRIBE_LOGIN_URL: --scribe.login-url
   SCRIBE_URL: --scribe.url
   STRUCTURED: --structured
   TIMEOUT: --timeout
