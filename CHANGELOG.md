@@ -1,6 +1,10 @@
 # Changelog
 Note: version releases in the 0.x.y range may introduce breaking changes.
 
+## 1.5.0
+
+- minor: scribe disable instead of enable, flag cleanup
+
 ## 1.4.2
 
 - patch: parser flag
