@@ -1,8 +1,11 @@
 command_prefix: valint download
 variable_mapping:
   TARGET:
+  BEAUTIFY: --beautify
   FOLDER_PATH: --folder-path
   FORMAT: --format
+  INITIATIVE_REPORT: --initiative-report
+  MD: --md
   PAYLOAD: --payload
   REF: --ref
   STORE: --store
@@ -10,7 +13,9 @@ variable_mapping:
   CONFIG: --config
   DELIVERABLE: --deliverable
   ENV: --env
-  GATE: --gate
+  GATE_NAME: --gate-name
+  GATE_TYPE: --gate-type
+  INPUT: --input
   LABEL: --label
   LEVEL: --level
   LOG_CONTEXT: --log-context
