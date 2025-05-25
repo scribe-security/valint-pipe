@@ -23,6 +23,9 @@ variables:
   AUTHOR_PHONE:
     type: string
     required: false
+  BASE_IMAGE:
+    type: string
+    required: false
   CA:
     type: string
     required: false
@@ -71,6 +74,9 @@ variables:
   KEY:
     type: string
     required: false
+  KMS:
+    type: string
+    required: false
   OCI:
     type: boolean
     required: false
@@ -86,6 +92,9 @@ variables:
   PACKAGE_TYPE:
     type: string
     required: false
+  PASS:
+    type: string
+    required: false
   PAYLOAD:
     type: string
     required: false
@@ -93,6 +102,12 @@ variables:
     type: string
     required: false
   PROVENANCE:
+    type: boolean
+    required: false
+  PUBKEY:
+    type: string
+    required: false
+  SKIP_CONFIRMATION:
     type: boolean
     required: false
   SUPPLIER_EMAIL:
@@ -119,7 +134,13 @@ variables:
   ENV:
     type: string
     required: false
-  GATE:
+  GATE_NAME:
+    type: string
+    required: false
+  GATE_TYPE:
+    type: string
+    required: false
+  INPUT:
     type: string
     required: false
   LABEL:
@@ -191,7 +212,16 @@ variables:
   STORE:
     type: string
     required: false
+  BEAUTIFY:
+    type: boolean
+    required: false
   FOLDER_PATH:
+    type: string
+    required: false
+  INITIATIVE_REPORT:
+    type: boolean
+    required: false
+  MD:
     type: string
     required: false
   COMPRESS:
@@ -257,8 +287,14 @@ variables:
   STATEMENT:
     type: string
     required: false
+  ALL_EVIDENCE:
+    type: boolean
+    required: false
   ATTESTATION:
     type: string
+    required: false
+  BOM:
+    type: boolean
     required: false
   BUNDLE:
     type: string
@@ -287,10 +323,16 @@ variables:
   INITIATIVE:
     type: string
     required: false
+  INITIATIVE_ID:
+    type: string
+    required: false
+  INITIATIVE_NAME:
+    type: string
+    required: false
   INPUT_FORMAT:
     type: string
     required: false
-  POLICY:
+  PUBLIC_KEY:
     type: string
     required: false
   RULE:
