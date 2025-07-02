@@ -260,6 +260,9 @@ variables:
   ALL_ENV:
     type: boolean
     required: false
+  BOM:
+    type: boolean
+    required: false
   BUILD_TYPE:
     type: string
     required: false
@@ -281,6 +284,18 @@ variables:
   PREDICATE:
     type: string
     required: false
+  SOURCE:
+    type: string
+    required: false
+  SOURCE_ASSET_ID:
+    type: string
+    required: false
+  SOURCE_ASSET_NAME:
+    type: string
+    required: false
+  SOURCE_ASSET_PLATFORM:
+    type: string
+    required: false
   STARTED_ON:
     type: string
     required: false
@@ -292,9 +307,6 @@ variables:
     required: false
   ATTESTATION:
     type: string
-    required: false
-  BOM:
-    type: boolean
     required: false
   BUNDLE:
     type: string

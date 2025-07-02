@@ -49,6 +49,9 @@ variable_mapping:
   SKIP_BUNDLE: --skip-bundle
   SKIP_CONFIRMATION: --skip-confirmation
   SKIP_REPORT: --skip-report
+  SOURCE_ASSET_ID: --source-asset-id
+  SOURCE_ASSET_NAME: --source-asset-name
+  SOURCE_ASSET_PLATFORM: --source-asset-platform
   URI: --uri
   CACHE_ENABLE: --cache-enable
   CONFIG: --config
