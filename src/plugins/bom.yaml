@@ -15,6 +15,7 @@ variable_mapping:
   CRL_FULL_CHAIN: --crl-full-chain
   DEPTH: --depth
   DISABLE_CRL: --disable-crl
+  FILTER_PURL: --filter-purl
   FILTER_REGEX: --filter-regex
   FILTER_SCOPE: --filter-scope
   FORCE: --force
