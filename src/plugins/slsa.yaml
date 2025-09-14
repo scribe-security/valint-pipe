@@ -4,6 +4,7 @@ variable_mapping:
   ALL_ENV: --all-env
   ATTEST_CONFIG: --attest.config
   ATTEST_DEFAULT: --attest.default
+  BOM: --bom
   BUILD_TYPE: --build-type
   BUILDER_ID: --builder-id
   BY_PRODUCT: --by-product
@@ -33,6 +34,10 @@ variable_mapping:
   PREDICATE: --predicate
   PUBKEY: --pubkey
   SKIP_CONFIRMATION: --skip-confirmation
+  SOURCE: --source
+  SOURCE_ASSET_ID: --source-asset-id
+  SOURCE_ASSET_NAME: --source-asset-name
+  SOURCE_ASSET_PLATFORM: --source-asset-platform
   STARTED_ON: --started-on
   STATEMENT: --statement
   CACHE_ENABLE: --cache-enable

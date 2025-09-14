@@ -22,6 +22,10 @@ variable_mapping:
   DEPTH: --depth
   DISABLE_CRL: --disable-crl
   EMAIL: --email
+  EXIT_CODE: --exit-code
+  FILTER_PURL: --filter-purl
+  FILTER_REGEX: --filter-regex
+  FILTER_SCOPE: --filter-scope
   FORCE: --force
   FORMAT: --format
   GIT_AUTH: --git-auth
@@ -49,6 +53,10 @@ variable_mapping:
   SKIP_BUNDLE: --skip-bundle
   SKIP_CONFIRMATION: --skip-confirmation
   SKIP_REPORT: --skip-report
+  SOURCE: --source
+  SOURCE_ASSET_ID: --source-asset-id
+  SOURCE_ASSET_NAME: --source-asset-name
+  SOURCE_ASSET_PLATFORM: --source-asset-platform
   URI: --uri
   CACHE_ENABLE: --cache-enable
   CONFIG: --config
